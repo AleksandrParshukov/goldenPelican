@@ -1,7 +1,10 @@
 .header {
   color: @white;
-  background-image: linear-gradient(124.11deg, #43BBA5 0%, #43B4BB 70.19%);
+  padding-bottom: 46px;
+  background-image: url(../img/banner_bg.svg), linear-gradient(124.11deg, #43BBA5 0%, #43B4BB 70.19%);
   background-repeat: no-repeat;
+  background-size: 2120px auto, auto auto;
+  background-position: center top, center;
 
   &--index {
     padding-bottom: 157px;
@@ -16,6 +19,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+    z-index: 100;
   }
 
   &__logo {
@@ -34,11 +39,19 @@
     left: 50%;
     transform: translateX(-50%);
   }
+
+  &__content {
+    margin-top: 40px;
+  }
 }
 
 
 @media (max-width: 1440px) {
   .header {
+    padding-bottom: calc(100vw * (46 / 1440));
+    background-size: calc(100vw * (2120 / 1440)) auto, auto auto;
+    background-position: center top, center;
+
     &--index {
       padding-bottom: calc(100vw * (157 / 1440));
       background-size: calc(100vw * (1298 / 1440)) auto, auto auto;
@@ -56,12 +69,18 @@
     &__stats {
       margin-top: calc(100vw * (-119 / 1440));
     }
+
+    &__content {
+      margin-top: calc(100vw * (40 / 1440));
+    }
   }
 }
 
 
 @media (max-width: 576px) {
   .header {
+    padding-bottom: calc(100vw * (40 / 360));
+
     &--index {
       padding-bottom: calc(100vw * (214 / 360));
       background-image: url(../img/index_banner_bg_mobile.svg), linear-gradient(124.11deg, #43BBA5 0%, #43B4BB 70.19%);
@@ -94,6 +113,10 @@
       left: 0;
       right: 0;
       transform: translateX(0);
+    }
+
+    &__content {
+      margin-top: calc(100vw * (30 / 360));
     }
   }
 }

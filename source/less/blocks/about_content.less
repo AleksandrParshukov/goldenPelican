@@ -1,0 +1,106 @@
+.about_content {
+  margin-top: 79px;
+
+  &__container {
+    margin-top: 39px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__item {
+    font-size: 16px;
+    line-height: 20px;
+    padding: 20px;
+    background: @white;
+    border: 1px solid rgba(44, 44, 44, 0.05);
+    box-shadow: 0px 4px 34px rgba(0, 0, 0, 0.04);
+    border-radius: 12px;
+  }
+
+  &__text {
+    font-weight: 500;
+  }
+
+  &__projects {
+    font-weight: 400;
+    margin-top: 25px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .about_content {
+    margin-top: calc(100vw * (79 / 1440));
+
+    &__container {
+      margin-top: calc(100vw * (39 / 1440));
+      gap: calc(100vw * (30 / 1440));
+    }
+
+    &__list {
+      gap: calc(100vw * (20 / 1440));
+    }
+
+    &__item {
+      font-size: calc(100vw * (16 / 1440));
+      line-height: calc(100vw * (20 / 1440));
+      padding: calc(100vw * (20 / 1440));
+      box-shadow: 0px calc(100vw * (4 / 1440)) calc(100vw * (34 / 1440)) rgba(0, 0, 0, 0.04);
+      border-radius: calc(100vw * (12 / 1440));
+    }
+
+    &__projects {
+      margin-top: calc(100vw * (25 / 1440));
+    }
+  }
+}
+
+
+@media (max-width: 576px) {
+  .about_content {
+    margin-top: calc(100vw * (30 / 360));
+
+    &__container {
+      margin-top: calc(100vw * (20 / 360));
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: min-content min-content;
+      gap: calc(100vw * (30 / 360));
+    }
+
+    &__img {
+      width: 100%;
+      height: auto;
+      grid-row-start: 2;
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+      gap: calc(100vw * (16 / 360));
+    }
+
+    &__item {
+      font-size: calc(100vw * (14 / 360));
+      line-height: calc(100vw * (18 / 360));
+      padding: calc(100vw * (20 / 360));
+      box-shadow: 0px calc(100vw * (4 / 360)) calc(100vw * (34 / 360)) rgba(0, 0, 0, 0.04);
+      border-radius: calc(100vw * (12 / 360));
+    }
+
+    &__projects {
+      margin-top: calc(100vw * (20 / 360));
+    }
+  }
+}

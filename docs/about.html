@@ -12,7 +12,7 @@
 </head>
 
 <body>
-  <header class="header header--index">
+  <header class="header">
     <div class="wrapper">
       <div class="header__top">
         <a href="" class="header__logo">
@@ -23,8 +23,8 @@
 
         <nav class="main-nav d-none d-md-flex">
           <ul class="main-nav__list">
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="about.html">О нас</a>
+            <li class="main-nav__item current">
+              <a class="main-nav__link" href="">О нас</a>
             </li>
             <li class="main-nav__item">
               <a class="main-nav__link" href="">Отчеты</a>
@@ -42,52 +42,179 @@
         </nav>
       </div>
 
-      <h1 class="visually_hidden">Золотой павлин</h1>
-
-      <div class="banner">
-        <p class="banner__title">Что мы делаем</p>
-        <p class="banner__text">
-          Благотворительное движение “Золотой Пеликан” помогает детям-сиротам, инвалидам, детям с проблемами
-          опорно-двигательного
-          аппарата, детям, находящимся в сложной жизненной ситуации, в том числе оставшимся без попечения родителей,
-          оказываем
-          материальную и гуманитарную помощь пожилым людям.
-        </p>
-        <div class="banner__links">
-          <a href="" class="banner__link button button--white">Хочу помочь</a>
-          <a href="" class="banner__link button button--empty">Подробнее о фонде</a>
-        </div>
-
-        <div class="banner__image">
-          <div class="circle circle--gradient"></div>
-          <img src="img/banner_img.png" width="478" height="478" alt="Фото девушки">
-          <div class="circle circle--waves d-none d-md-block"></div>
-        </div>
-      </div>
-
-      <div class="header__stats stats">
-        <ul class="stats__list">
-          <li class="stats__item">
-            <p class="stats__caption">26 лет</p>
-            <p class="stats__text">помогаем жителям<br class="d-md-inline">
-              вместе</p>
+      <div class="header__content">
+        <ul class="breadcrumb d-none d-md-flex">
+          <li class="breadcrumb__item">
+            <a href="" class="breadcrumb__link">Главная</a>
           </li>
-          <li class="stats__item">
-            <p class="stats__caption">> 150 000</p>
-            <p class="stats__text">жителей получили помощь<br>
-              благодаря вам</p>
-          </li>
-          <li class="stats__item">
-            <p class="stats__caption">> 20 000</p>
-            <p class="stats__text">благотворительных акций<br>
-              благодаря вам</p>
+          <li class="breadcrumb__item">
+            <p href="" class="breadcrumb__text">О нас</p>
           </li>
         </ul>
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h1 class="h1">О нас</h1>
+          <a href="" class="button button--white d-none d-md-flex">Хочу помочь</a>
+        </div>
       </div>
+
     </div>
   </header>
 
   <main class="main vacancy">
+    <section class="about">
+      <div class="wrapper">
+        <div class="about__container">
+          <p class="about__text">
+            Благотворительное движение “Золотой Пеликан” создано для оказания помощи самым разным группам населения. Мы
+            работаем с
+            1994 года и входим в топ-3 общественных организаций города, оказывающих наибольшее количество социальных
+            услуг.
+            <br><br>
+            Мы помогаем детям-сиротам, инвалидам, детям с проблемами опорно-двигательного аппарата, детям, находящимся в
+            сложной
+            жизненной ситуации, в том числе оставшимся без попечения родителей, оказываем материальную и гуманитарную
+            помощь пожилым
+            людям.
+            <br><br>
+            На регулярной основе мы проводим культурно-массовые мероприятия и реабилитационные программы.
+          </p>
+
+          <div class="about__aside">
+            <p class="about__number">26</p>
+            <p>
+              Лет<br>
+              помогаем<br>
+              жителям<br>
+              вместе<br>
+            </p>
+          </div>
+
+          <div class="about__quote about_quote">
+            <div class="about_quote__img">
+              <img src="img/platon.png" width="213" height="213" alt="Платон">
+            </div>
+            <p class="about_quote__text">Стараясь о счастье других, мы находим свое собственное</p>
+            <p class="about_quote__author">Платон</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about_content">
+      <div class="wrapper">
+        <h2 class="h2">Что мы делаем</h2>
+
+        <div class="about_content__container">
+          <img class="about_content__img" src="img/about_img.png" width="630" height="772" alt="">
+          <ul class="about_content__list">
+            <li class="about_content__item">
+              <p class="about_content__text">
+                Осуществляет поддержку организаций, обществ и объединений ветеранов ВОВ, инвалидов и жителей блокадного
+                Ленинграда.
+              </p>
+              <p class="about_content__projects">
+                Программы: “Дом Доброй Надежды”,<br>
+                “Рейс милосердия”
+              </p>
+            </li>
+
+            <li class="about_content__item">
+              <p class="about_content__text">
+                Оказывает содействие в реабилитации, обучении, организации досуга и проведении культурных мероприятий
+                для детских
+                социальных дошкольных и школьных учреждений.
+              </p>
+              <p class="about_content__projects">
+                Программы: “Ходус-Фото”, “Мы рисуем мир”, “Подари рождество”, “Веселый Каравай”, “Нарисуй песню”,
+                “Добрый Клоун”
+              </p>
+            </li>
+
+            <li class="about_content__item">
+              <p class="about_content__text">
+                Является учредителем: Союза Общественных Благотворительных Организаций «Гражданская Социальная
+                Инициатива», Городского
+                центра социальных программ «Пеликан-Центр».
+                Осуществляет международное сотрудничество по системе “Lions Club”.
+              </p>
+            </li>
+
+            <li class="about_content__item">
+              <p class="about_content__text">
+                Тесно сотрудничает с Правительством и Законодательным Собранием СПб и ЛО, Союзом Театральных деятелей
+                СПб и Союзом
+                Журналистов СПб, Центром РНО, Российским Государственным Историческим Архивом, Объединениями и Союзами
+                промышленников и
+                предпринимателей СПб и ЛО. и т.д.
+              </p>
+            </li>
+
+            <li class="about_content__item">
+              <p class="about_content__text">
+                Оказывает помощь детям с ограниченными физическими возможностями и сиротам.
+              </p>
+              <p class="about_content__projects">
+                Программы: “Новые горизонты”, “Говорящая книга”, “Созвучие”
+              </p>
+            </li>
+
+            <li class="about_content__item">
+              <p class="about_content__text">
+                Проводит юридические консультации малоимущих граждан.
+
+              </p>
+              <p class="about_content__projects">
+                Программа “Гестор”
+              </p>
+            </li>
+
+            <li class="about_content__item">
+              <p class="about_content__text">
+                Сотрудничает с представителями бизнес сообщества в рамках развития Социально ответственного бизнеса в
+                регионе.
+              </p>
+            </li>
+
+            <li class="about_content__item">
+              <p class="about_content__text">
+                Награждает выдающихся благотворителей и меценатов СПб и ЛО призом и орденом “Золотой Пеликан”.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="documents">
+      <div class="wrapper">
+        <h2 class="h2">Уставные документы</h2>
+        <ul class="documents__list">
+          <li class="documents__item">
+            <img class="documents__img" src="img/file.svg" width="26" height="31" alt="Файл">
+            <p class="documents__name">Устав фонда</p>
+            <a href="" class="documents__link">Смотреть</a>
+          </li>
+          <li class="documents__item">
+            <img class="documents__img" src="img/file.svg" width="26" height="31" alt="Файл">
+            <p class="documents__name">Свидетельство о государственной регистрации</p>
+            <a href="" class="documents__link">Смотреть</a>
+          </li>
+          <li class="documents__item">
+            <img class="documents__img" src="img/file.svg" width="26" height="31" alt="Файл">
+            <p class="documents__name">Свидетельство о внесении
+              в реестр благотворительных организаций</p>
+            <a href="" class="documents__link">Смотреть</a>
+          </li>
+          <li class="documents__item">
+            <img class="documents__img" src="img/file.svg" width="26" height="31" alt="Файл">
+            <p class="documents__name">Свидетельство о постановке на учет в налоговый орган</p>
+            <a href="" class="documents__link">Смотреть</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
     <section class="projects">
       <div class="wrapper">
         <div class="d-flex align-items-center">
@@ -179,7 +306,7 @@
       </div>
     </section>
 
-    <section class="payment payment--border-bottom">
+    <section class="payment">
       <div class="wrapper">
         <div class="payment__container">
           <div class="payment__amounts">
@@ -211,71 +338,6 @@
             <a class="payment__link" href="">условиями оферты</a>
           </p>
         </div>
-      </div>
-    </section>
-
-    <section class="helped">
-      <div class="wrapper">
-        <div class="d-flex align-items-center">
-          <a href="projects.html" class="h2">Вы уже помогли</a>
-          <a href="projects.html" class="section_link">
-            <span class=" d-md-none">
-              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none">
-                <path fill="#2C2C2C" fill-rule="evenodd"
-                  d="M9.72 5.93a.81.81 0 0 1 1.15 0l6.5 6.5c.31.31.31.83 0 1.14l-6.5 6.5a.81.81 0 0 1-1.15-1.14L15.64 13 9.72 7.07a.81.81 0 0 1 0-1.14Z"
-                  clip-rule="evenodd" />
-              </svg>
-            </span>
-            <span class="d-none d-md-inline">Посмотреть больше</span>
-          </a>
-        </div>
-
-        <div class="helped__list owl-carousel">
-          <div class="helped__item item">
-            <p class="helped__project" style="background-color: #43BB90;">Новые горизонты</p>
-            <img class="helped__img" src="img/helped_1.jpg" width="300" height="200" alt="">
-            <p class="helped__caption">Ремонт коляски</p>
-            <p class="helped__text">
-              В рамках программы “Новые Горизонты” участники Движения провели ремонт и техническое обслуживание
-              инвалидной техники в
-              ГБОУ школе №627 Невского района.
-            </p>
-          </div>
-
-          <div class="helped__item item">
-            <p class="helped__project" style="background-color: #ED695B;">Добрый Клоун</p>
-            <img class="helped__img" src="img/helped_2.jpg" width="300" height="200" alt="">
-            <p class="helped__caption">Августовские посещения “Добрый Клоун”</p>
-            <p class="helped__text">
-              В августе в рамках программы “Добрый Клоун” участники Движения посетили 2 семьи, подпечных СПб ГАУЗ
-              “Хоспис (детский)”.
-              Выражаем благодарность Инне Левинтан.
-            </p>
-          </div>
-
-          <div class="helped__item item">
-            <p class="helped__project" style="background-color: #43BB90;">Новые горизонты</p>
-            <img class="helped__img" src="img/helped_3.jpg" width="300" height="200" alt="">
-            <p class="helped__caption">Новые Горизонты и #ДелаБлагие</p>
-            <p class="helped__text">
-              Благодаря поддержке Северо-Западная ТЭЦ им. А. Г. Бориса #ДелаБлагие волонтёрами нашего Движения были
-              закуплены
-              необходимые запчасти и был проведён ремонт инвалидной техники.
-            </p>
-          </div>
-
-          <div class="helped__item item">
-            <p class="helped__project" style="background-color: #FF8F27;">Доктор Музыка</p>
-            <img class="helped__img" src="img/helped_4.jpg" width="300" height="200" alt="">
-            <p class="helped__caption">Мартовские посещения “Доктор Музыка”</p>
-            <p class="helped__text">
-              В марте в рамках программы “Доктор Музыка” участники Движения посетили 2 семьи, подпечных СПб ГАУЗ “Хоспис
-              (детский)”.
-              Выражаем благодарность Лидии Копеецкой
-            </p>
-          </div>
-        </div>
-
       </div>
     </section>
   </main>

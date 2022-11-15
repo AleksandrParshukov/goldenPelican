@@ -1,0 +1,108 @@
+.about {
+  margin-top: 50px;
+
+  &__container {
+    display: grid;
+    grid-template-areas: 'text aside' 'quote quote';
+    grid-template-columns: 1fr min-content;
+    gap: 107px 98px;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    margin-top: 17px;
+    grid-area: text;
+  }
+
+  &__aside {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 38px;
+    color: @primary;
+    padding-bottom: 29px;
+    padding-right: 29px;
+    border-bottom: 2px solid currentColor;
+    display: flex;
+    align-items: center;
+    grid-area: aside;
+  }
+
+  &__number {
+    font-weight: 400;
+    font-size: 210px;
+    line-height: 264px;
+    margin-right: 39px;
+  }
+
+  &__quote {
+    justify-self: end;
+    grid-area: quote;
+  }
+}
+
+
+@media (max-width: 1440px) {
+  .about {
+    margin-top: calc(100vw * (50 / 1440));
+
+    &__container {
+      gap: calc(100vw * (107 / 1440)) calc(100vw * (98 / 1440));
+    }
+
+    &__text {
+      font-size: calc(100vw * (18 / 1440));
+      line-height: calc(100vw * (23 / 1440));
+      margin-top: calc(100vw * (17 / 1440));
+    }
+
+    &__aside {
+      font-size: calc(100vw * (30 / 1440));
+      line-height: calc(100vw * (38 / 1440));
+      padding-bottom: calc(100vw * (29 / 1440));
+      padding-right: calc(100vw * (29 / 1440));
+    }
+
+    &__number {
+      font-size: calc(100vw * (210 / 1440));
+      line-height: calc(100vw * (264 / 1440));
+      margin-right: calc(100vw * (39 / 1440));
+    }
+  }
+}
+
+
+@media (max-width: 576px) {
+  .about {
+    margin-top: calc(100vw * (30 / 360));
+
+    &__container {
+      display: grid;
+      grid-template-areas: 'text' 'aside' 'quote';
+      grid-template-columns: 100%;
+      gap: 0;
+    }
+
+    &__text {
+      font-size: calc(100vw * (14 / 360));
+      line-height: calc(100vw * (18 / 360));
+      margin-top: 0;
+      margin-bottom: calc(100vw * (20 / 360));
+    }
+
+    &__aside {
+      font-size: calc(100vw * (20 / 360));
+      line-height: calc(100vw * (25 / 360));
+      padding-bottom: 0;
+      padding-right: 0;
+      margin-bottom: calc(100vw * (40 / 360));
+    }
+
+    &__number {
+      font-size: calc(100vw * (140 / 360));
+      line-height: calc(100vw * (176 / 360));
+      margin-right: calc(100vw * (24 / 360));
+    }
+  }
+}

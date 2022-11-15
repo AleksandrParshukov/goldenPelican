@@ -1,0 +1,35 @@
+.breadcrumb {
+  display: flex;
+
+  &__item {
+    font-size: 16px;
+    line-height: 20px;
+    color: @white;
+    margin-right: 10px;
+    display: flex;
+    opacity: 0.6;
+
+    &::after {
+      content: "/";
+      margin-left: 10px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+      opacity: 1;
+
+      &::after {
+        content: none;
+      }
+    }
+  }
+
+  &__link {
+    color: inherit;
+    font-weight: 400;
+
+    &:hover {
+      color: inherit;
+    }
+  }
+}
