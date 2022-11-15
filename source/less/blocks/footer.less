@@ -1,0 +1,129 @@
+.footer {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: @white;
+  background-color: @black;
+
+  &__container {
+    padding-block: 33px 53px;
+    display: grid;
+    grid-template-areas: 'logo btn social' 'address requisites .';
+    grid-template-columns: 1fr min-content min-content;
+    gap: 50px 163px;
+  }
+
+  &__logo {
+    grid-area: logo;
+
+    > img {
+      width: 291px;
+      height: 74px;
+    }
+  }
+
+  &__btn {
+    grid-area: btn;
+  }
+
+  &__social {
+    grid-area: social;
+
+    > svg {
+      width: 48px;
+      height: 48px;
+    }
+  }
+
+  &__address {
+    grid-area: address;
+  }
+
+  &__requisites {
+    grid-area: requisites;
+  }
+
+  &__link {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    color: @white;
+
+    &:hover {
+      color: @white;
+      text-decoration: underline;
+    }
+  }
+}
+
+
+@media (max-width: 1440px) {
+  .footer {
+    font-size: calc(100vw * (16 / 1440));
+    line-height: calc(100vw * (32 / 1440));
+
+    &__container {
+      padding-block: calc(100vw * (33 / 1440)) calc(100vw * (53 / 1440));
+      gap: calc(100vw * (50 / 1440)) calc(100vw * (163 / 1440));
+    }
+
+    &__logo {
+      > img {
+        width: calc(100vw * (291 / 1440));
+        height: calc(100vw * (74 / 1440));
+      }
+    }
+
+    &__social {
+      > svg {
+        width: calc(100vw * (48 / 1440));
+        height: calc(100vw * (48 / 1440));
+      }
+    }
+
+    &__link {
+      font-size: calc(100vw * (16 / 1440));
+      line-height: calc(100vw * (32 / 1440));
+    }
+  }
+}
+
+
+@media (max-width: 576px) {
+  .footer {
+    font-size: calc(100vw * (16 / 360));
+    line-height: calc(100vw * (32 / 360));
+
+    &__container {
+      padding-block: calc(100vw * (30 / 360)) calc(100vw * (38 / 360));
+      grid-template-areas: 'logo' 'address' 'requisites' 'btn' 'social';
+      grid-template-columns: 100%;
+      gap: calc(100vw * (30 / 360));
+    }
+
+    &__logo {
+      > img {
+        width: calc(100vw * (291 / 360));
+        height: calc(100vw * (74 / 360));
+      }
+    }
+
+    &__btn {
+      justify-self: center;
+    }
+
+    &__social {
+      justify-self: center;
+
+      > svg {
+        width: calc(100vw * (48 / 360));
+        height: calc(100vw * (48 / 360));
+      }
+    }
+
+    &__link {
+      font-size: calc(100vw * (16 / 360));
+      line-height: calc(100vw * (32 / 360));
+    }
+  }
+}

@@ -1,0 +1,102 @@
+.project {
+  padding: 20px 16px;
+  background: @white;
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.11);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+
+  &__img {
+    width: 268px;
+    height: 196px;
+    margin-bottom: 16px;
+    object-fit: contain;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    margin-block: 12px 43px;
+  }
+
+  &__results {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    margin-top: auto;
+  }
+
+  &__link {
+    display: none;
+  }
+}
+
+
+@media (max-width: 1440px) {
+  .project {
+    padding: calc(100vw * (20 / 1440)) calc(100vw * (16 / 1440));
+    box-shadow: 0px calc(100vw * (4 / 1440)) calc(100vw * (24 / 1440)) rgba(0, 0, 0, 0.11);
+    border-radius: calc(100vw * (12 / 1440));
+
+    &__img {
+      width: calc(100vw * (268 / 1440));
+      height: calc(100vw * (196 / 1440));
+      margin-bottom: calc(100vw * (16 / 1440));
+    }
+
+    &__title {
+      font-size: calc(100vw * (20 / 1440));
+      line-height: calc(100vw * (25 / 1440));
+    }
+
+    &__text {
+      font-size: calc(100vw * (14 / 1440));
+      line-height: calc(100vw * (18 / 1440));
+      margin-block: calc(100vw * (12 / 1440)) calc(100vw * (43 / 1440));
+    }
+
+    &__results {
+      font-size: calc(100vw * (16 / 1440));
+      line-height: calc(100vw * (20 / 1440));
+    }
+
+  }
+}
+
+
+@media (max-width: 576px) {
+  .project {
+    padding: calc(100vw * (20 / 360)) calc(100vw * (16 / 360));
+    box-shadow: 0px calc(100vw * (4 / 360)) calc(100vw * (24 / 360)) rgba(0, 0, 0, 0.11);
+    border-radius: calc(100vw * (12 / 360));
+
+    &__img {
+      width: calc(100vw * (268 / 360));
+      height: calc(100vw * (196 / 360));
+      margin-bottom: calc(100vw * (16 / 360));
+    }
+
+    &__title {
+      font-size: calc(100vw * (20 / 360));
+      line-height: calc(100vw * (25 / 360));
+    }
+
+    &__text {
+      font-size: calc(100vw * (14 / 360));
+      line-height: calc(100vw * (18 / 360));
+      margin-block: calc(100vw * (12 / 360)) calc(100vw * (43 / 360));
+    }
+
+    &__results {
+      font-size: calc(100vw * (16 / 360));
+      line-height: calc(100vw * (20 / 360));
+    }
+  }
+}

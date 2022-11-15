@@ -1,0 +1,99 @@
+.header {
+  color: @white;
+  background-image: linear-gradient(124.11deg, #43BBA5 0%, #43B4BB 70.19%);
+  background-repeat: no-repeat;
+
+  &--index {
+    padding-bottom: 157px;
+    background-image: url(../img/index_banner_bg.svg), linear-gradient(124.11deg, #43BBA5 0%, #43B4BB 70.19%);
+    background-size: 1298px auto, auto auto;
+    background-position: calc(50% + 264px) top, center;
+    position: relative;
+  }
+
+  &__top {
+    border-bottom: 1px solid @white-fade;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    height: min-content;
+
+    > img {
+      width: 394px;
+      height: 60px;
+    }
+  }
+
+  &__stats {
+    margin-top: -119px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+
+@media (max-width: 1440px) {
+  .header {
+    &--index {
+      padding-bottom: calc(100vw * (157 / 1440));
+      background-size: calc(100vw * (1298 / 1440)) auto, auto auto;
+      background-position: calc(100vw * (314 / 1440)) top, center;
+    }
+    
+
+    &__logo {
+      > img {
+        width: calc(100vw * (394 / 1440));
+        height: calc(100vw * (60 / 1440));
+      }
+    }
+
+    &__stats {
+      margin-top: calc(100vw * (-119 / 1440));
+    }
+  }
+}
+
+
+@media (max-width: 576px) {
+  .header {
+    &--index {
+      padding-bottom: calc(100vw * (214 / 360));
+      background-image: url(../img/index_banner_bg_mobile.svg), linear-gradient(124.11deg, #43BBA5 0%, #43B4BB 70.19%);
+      background-size: 100% auto, auto auto;
+      background-position: top center, center;
+    }
+
+    &__top {
+      border-bottom: 1px solid @white-fade;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-block: calc(100vw * (24 / 360)) calc(100vw * (20 / 360));
+    }
+
+    &__logo {
+      height: min-content;
+
+      > img {
+        width: calc(100vw * (220 / 360));
+        height: calc(100vw * (33.5 / 360));
+      }
+    }
+
+    &__stats {
+      margin-top: calc(100vw * (-174 / 360));
+      margin-inline: calc(100vw * (20 / 360));
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      transform: translateX(0);
+    }
+  }
+}

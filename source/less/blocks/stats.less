@@ -1,0 +1,104 @@
+.stats {
+  padding: 56px 25px 40px;
+  background-color: @white;
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.11);
+  border-radius: 16px;
+
+  &__list {
+    display: grid;
+    grid-template-columns: 329px 483px 428px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid @black-fade;
+    padding-left: 64px;
+
+    &:first-child {
+      padding-left: 0;
+      border-left: none;
+    }
+  }
+
+  &__caption {
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 63px;
+    color: @primary;
+    margin-bottom: 16px;  
+  }
+
+  &__text {
+    font-size: 20px;
+    line-height: 25px;
+    color: @black;
+  }
+}
+
+
+@media (max-width: 1440px) {
+  .stats {
+    padding: calc(100vw * (56 / 1440)) calc(100vw * (25 / 1440)) calc(100vw * (40 / 1440));
+    box-shadow: 0px calc(100vw * (4 / 1440)) calc(100vw * (24 / 1440)) rgba(0, 0, 0, 0.11);
+    border-radius: calc(100vw * (16 / 1440));
+
+    &__list {
+      grid-template-columns: calc(100vw * (329 / 1440)) calc(100vw * (483 / 1440)) calc(100vw * (428 / 1440));
+    }
+
+    &__item {
+      padding-left: calc(100vw * (64 / 1440));
+    }
+
+    &__caption {
+      font-size: calc(100vw * (50 / 1440));
+      line-height: calc(100vw * (63 / 1440));
+      margin-bottom: calc(100vw * (16 / 1440));  
+    }
+
+    &__text {
+      font-size: calc(100vw * (20 / 1440));
+      line-height: calc(100vw * (25 / 1440));
+    }
+  }
+}
+
+
+@media (max-width: 576px) {
+  .stats {
+    padding: calc(100vw * (16 / 360)) calc(100vw * (20 / 360));
+    background-color: @white;
+    box-shadow: 0px calc(100vw * (4 / 360)) calc(100vw * (24 / 360)) rgba(0, 0, 0, 0.11);
+    border-radius: calc(100vw * (16 / 360));
+
+    &__list {
+      grid-template-columns: 100%;
+    }
+
+    &__item {
+      padding-left: 0;
+      padding-bottom: calc(100vw * (20 / 360));
+      margin-bottom: calc(100vw * (20 / 360));
+      border-bottom: 1px solid @black-fade;
+      border-left: 0;
+
+      &:last-child {
+        padding-bottom: 0;
+        margin-bottom: 0;
+        border: none;
+      }
+    }
+
+    &__caption {
+      font-size: calc(100vw * (36 / 360));
+      line-height: calc(100vw * (45 / 360));
+      margin-bottom: calc(100vw * (4 / 360));  
+    }
+
+    &__text {
+      font-size: calc(100vw * (16 / 360));
+      line-height: calc(100vw * (20 / 360));
+    }
+  }
+}

@@ -1,0 +1,171 @@
+.payment {
+  &--border-bottom {
+    .payment__container {
+      border-bottom: 1px solid @black-fade;
+    }
+  }
+
+  &__container {
+    padding-block: 40px;
+    border-top: 1px solid @black-fade;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 'amounts amounts btn' 'methods link text';
+    gap: 26px;
+    align-items: center;
+  }
+
+  &__amounts {
+    display: flex;
+    gap: 20px;
+    grid-area: amounts;
+  }
+
+  &__amount {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+    color: @black;
+    width: 97px;
+    padding-block: 21.5px;
+    background-color: @white-special;
+
+    &--other {
+      width: 276px;
+    }
+
+    &:hover {
+      color: @black;
+    }
+  }
+
+  &__btn {
+    justify-self: end;
+    grid-area: btn;
+  }
+
+  &__methods {
+    grid-area: methods;
+  }
+
+  &__link {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: @primary;
+
+    &--grid {
+      grid-area: link;
+      justify-self: center;
+    }
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: rgba(0, 0, 0, 0.4);
+
+    &--grid {
+      grid-area: text;
+      justify-self: end;
+    }
+  }
+}
+
+
+@media (max-width: 1440px) {
+  .payment {
+    &__container {
+      padding-block: calc(100vw * (40 / 1440));
+      gap: calc(100vw * (26 / 1440));
+    }
+
+    &__amounts {
+      gap: calc(100vw * (20 / 1440));
+    }
+
+    &__amount {
+      font-size: calc(100vw * (18 / 1440));
+      line-height: calc(100vw * (23 / 1440));
+      width: calc(100vw * (97 / 1440));
+      padding-block: calc(100vw * (21.5 / 1440));
+
+      &--other {
+        width: calc(100vw * (276 / 1440));
+      }
+    }
+
+    &__link {
+      font-size: calc(100vw * (16 / 1440));
+      line-height: calc(100vw * (20 / 1440));
+    }
+
+    &__text {
+      font-size: calc(100vw * (16 / 1440));
+      line-height: calc(100vw * (20 / 1440));
+    }
+  }
+}
+
+
+@media (max-width: 576px) {
+  .payment {
+    &__container {
+      padding-block: calc(100vw * (20 / 360));
+      border-top: 1px solid @black-fade;
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-areas: 'amounts' 'link' 'methods' 'btn' 'text';
+      gap: 0;
+      align-items: center;
+    }
+
+    &__amounts {
+      margin-bottom: calc(100vw * (30 / 360));
+      flex-wrap: wrap;
+      gap: calc(100vw * (20 / 360));
+    }
+
+    &__amount {
+      font-weight: 500;
+      font-size: calc(100vw * (18 / 360));
+      line-height: calc(100vw * (23 / 360));
+      width: calc(100vw * (93 / 360));
+      padding-block: calc(100vw * (18.5 / 360));
+
+      &--other {
+        width: 100%;
+      }
+    }
+
+    &__btn {
+      width: 100%;
+      margin-bottom: calc(100vw * (17 / 360));
+    }
+
+    &__methods {
+      margin-bottom: calc(100vw * (40 / 360));
+      grid-area: methods;
+    }
+
+    &__link {
+      font-size: calc(100vw * (16 / 360));
+      line-height: calc(100vw * (20 / 360));
+      margin-bottom: calc(100vw * (20 / 360));
+
+      &--grid {
+        justify-self: start;
+      }
+    }
+
+    &__text {
+      font-size: calc(100vw * (16 / 360));
+      line-height: calc(100vw * (20 / 360));
+
+      &--grid {
+        justify-self: start;
+      }
+    }
+  }
+}
