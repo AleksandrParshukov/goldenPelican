@@ -7,9 +7,22 @@
     height: min-content;
     padding-block: 44px;
     margin-left: 45px;
+    position: relative;
 
     &:first-child {
       margin: 0;
+    }
+
+    &.current::after {
+      content: "";
+      height: 4px;
+      background-color: @white;
+      display: block;
+      position: absolute;
+      top: 100%;
+      left: -27px;
+      right: -27px;
+      transform: translateY(-100%);
     }
   }
 
@@ -33,6 +46,14 @@
     &__item {
       padding-block: calc(100vw * (44 / 1440));
       margin-left: calc(100vw * (45 / 1440));
+      
+
+      &.current::after {
+        content: "";
+        height: calc(100vw * (4 / 1440));
+        left: calc(100vw * (-27 / 1440));
+        right: calc(100vw * (-27 / 1440));
+      }
     }
 
     &__link {
