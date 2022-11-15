@@ -17,7 +17,6 @@
   &--white {
     color: @black;
     background-color: @white;
-    border: 2px solid @white;
     
     &:hover {
       color: @black;
@@ -26,7 +25,7 @@
 
   &--empty {
     background-color: transparent;
-    border: 2px solid @white;
+    border: 2px solid currentColor;
   }
 
   &--primary {
@@ -77,6 +76,7 @@
       border: none;
       padding: 0;
       display: inline;
+      height: auto;
     }
   }
 }

@@ -115,14 +115,13 @@ picture > img {
 .button--white {
   color: #2c2c2c;
   background-color: #FFFFFF;
-  border: 2px solid #FFFFFF;
 }
 .button--white:hover {
   color: #2c2c2c;
 }
 .button--empty {
   background-color: transparent;
-  border: 2px solid #FFFFFF;
+  border: 2px solid currentColor;
 }
 .button--primary {
   background-color: #43B6B4;
@@ -164,6 +163,7 @@ picture > img {
     border: none;
     padding: 0;
     display: inline;
+    height: auto;
   }
 }
 .header {
@@ -1790,6 +1790,140 @@ picture > img {
   .requisites__text {
     font-size: calc(100vw * (14 / 360));
     line-height: calc(100vw * (18 / 360));
+  }
+}
+.project_page {
+  margin-block: 50px 60px;
+}
+.project_page__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+.project_page__card {
+  padding: 26px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 34px rgba(0, 0, 0, 0.04);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+}
+.project_page__slider {
+  width: 578px;
+  height: 304px;
+  margin-bottom: 16px;
+}
+.project_page__img {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.project_page__img > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.project_page__name {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 30px;
+  margin-bottom: 16px;
+}
+.project_page__text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  margin-bottom: 30px;
+}
+.project_page__links {
+  margin-top: 26px;
+  display: flex;
+  justify-content: space-between;
+}
+.project_page__links .button {
+  width: 100%;
+}
+.project_page__links .button--empty {
+  color: #43B6B4;
+  margin-left: 16px;
+}
+@media (max-width: 1440px) {
+  .project_page {
+    margin-block: calc(100vw * (50 / 1440)) calc(100vw * (60 / 1440));
+  }
+  .project_page__container {
+    gap: calc(100vw * (30 / 1440));
+  }
+  .project_page__card {
+    padding: calc(100vw * (26 / 1440));
+    box-shadow: 0px calc(100vw * (4 / 1440)) calc(100vw * (34 / 1440)) rgba(0, 0, 0, 0.04);
+    border-radius: calc(100vw * (12 / 1440));
+  }
+  .project_page__slider {
+    width: calc(100vw * (578 / 1440));
+    height: calc(100vw * (304 / 1440));
+    margin-bottom: calc(100vw * (16 / 1440));
+  }
+  .project_page__img {
+    border-radius: calc(100vw * (12 / 1440));
+  }
+  .project_page__name {
+    font-size: calc(100vw * (28 / 1440));
+    line-height: calc(100vw * (30 / 1440));
+    margin-bottom: calc(100vw * (16 / 1440));
+  }
+  .project_page__text {
+    font-size: calc(100vw * (14 / 1440));
+    line-height: calc(100vw * (18 / 1440));
+    margin-bottom: calc(100vw * (30 / 1440));
+  }
+  .project_page__links {
+    margin-top: calc(100vw * (26 / 1440));
+  }
+  .project_page__links .button--empty {
+    margin-left: calc(100vw * (16 / 1440));
+  }
+}
+@media (max-width: 576px) {
+  .project_page {
+    margin-block: calc(100vw * (30 / 360)) calc(100vw * (50 / 360));
+  }
+  .project_page__container {
+    grid-template-columns: 100%;
+    gap: calc(100vw * (30 / 360));
+  }
+  .project_page__card {
+    padding: calc(100vw * (16 / 360)) calc(100vw * (16 / 360)) calc(100vw * (30 / 360));
+    box-shadow: 0px calc(100vw * (4 / 360)) calc(100vw * (34 / 360)) rgba(0, 0, 0, 0.04);
+    border-radius: calc(100vw * (12 / 360));
+  }
+  .project_page__slider {
+    width: calc(100vw * (288 / 360));
+    height: calc(100vw * (204 / 360));
+    margin-bottom: calc(100vw * (16 / 360));
+  }
+  .project_page__img {
+    border-radius: calc(100vw * (12 / 360));
+  }
+  .project_page__name {
+    font-size: calc(100vw * (24 / 360));
+    line-height: calc(100vw * (30 / 360));
+    margin-bottom: calc(100vw * (8 / 360));
+  }
+  .project_page__text {
+    font-size: calc(100vw * (14 / 360));
+    line-height: calc(100vw * (18 / 360));
+    margin-bottom: calc(100vw * (16 / 360));
+  }
+  .project_page__links {
+    margin-top: calc(100vw * (20 / 360));
+    display: flex;
+    flex-direction: column;
+  }
+  .project_page__links .button--empty {
+    margin-top: calc(100vw * (30 / 360));
+    margin-left: 0;
   }
 }
 .visually_hidden {
