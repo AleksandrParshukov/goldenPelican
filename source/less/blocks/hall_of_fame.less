@@ -1,0 +1,153 @@
+.hall_of_fame {
+  margin-top: 60px;
+
+  &__container {
+    margin-bottom: 100px;
+    display: flex;
+    gap: 140px;
+    justify-content: space-between;
+  }
+
+  .section_link {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
+    text-decoration-line: underline;
+    text-transform: none;
+    color: @primary;
+  }
+
+  &__list {
+    margin-top: 40px;
+    margin-right: 65px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(6, min-content);
+    gap: 22px 97px;
+    grid-auto-flow: column;
+  }
+
+  &__item {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 36px;
+  }
+  
+  &__diagram {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    width: 264px;
+    height: 264px;
+    margin-block: 25px 20px;
+    margin-inline: auto;
+    position: relative;
+    display: grid;
+    place-content: center;
+  }
+
+  &__sum {
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 43px;
+    color: @primary;
+  }
+
+  &__progress {
+    position: absolute;
+    inset: 0;
+  }
+}
+
+
+@media (max-width: 1440px) {
+  .hall_of_fame {
+    margin-top: calc(100vw * (60 / 1440));
+
+    &__container {
+      margin-bottom: calc(100vw * (100 / 1440));
+      gap: calc(100vw * (140 / 1440));
+    }
+
+    .section_link {
+      font-size: calc(100vw * (24 / 1440));
+      line-height: calc(100vw * (30 / 1440));
+    }
+
+    &__list {
+      margin-top: calc(100vw * (40 / 1440));
+      margin-right: calc(100vw * (65 / 1440));
+      gap: calc(100vw * (22 / 1440)) calc(100vw * (97 / 1440));
+    }
+
+    &__item {
+      font-size: calc(100vw * (20 / 1440));
+      line-height: calc(100vw * (36 / 1440));
+    }
+    
+    &__diagram {
+      font-size: calc(100vw * (16 / 1440));
+      line-height: calc(100vw * (20 / 1440));
+      width: calc(100vw * (264 / 1440));
+      height: calc(100vw * (264 / 1440));
+      margin-block: calc(100vw * (25 / 1440)) calc(100vw * (20 / 1440));
+    }
+
+    &__sum {
+      font-size: calc(100vw * (34 / 1440));
+      line-height: calc(100vw * (43 / 1440));
+    }
+  }
+}
+
+
+@media (max-width: 576px) {
+  .hall_of_fame {
+    margin-top: calc(100vw * (50 / 360));
+
+    .section_link {
+      height: min-content;
+    }
+
+    &__container {
+      margin-bottom: calc(100vw * (50 / 360));
+      display: flex;
+      flex-direction: column-reverse;
+      gap: calc(100vw * (50 / 360));
+    }
+
+    &__list {
+      margin-top: calc(100vw * (20 / 360));
+      margin-right: 0;
+      display: flex;
+      flex-direction: column;
+      gap: calc(100vw * (14 / 360));
+    }
+
+    &__item {
+      font-size: calc(100vw * (16 / 360));
+      line-height: calc(100vw * (36 / 360));
+      padding-bottom: calc(100vw * (14 / 360));
+      border-bottom: 1px solid @black-fade;
+    }
+    
+    &__diagram {
+      font-size: calc(100vw * (20 / 360));
+      line-height: calc(100vw * (25 / 360));
+      width: calc(100vw * (320 / 360));
+      height: calc(100vw * (320 / 360));
+      margin-block: calc(100vw * (30 / 360));
+    }
+
+    &__sum {
+      font-size: calc(100vw * (44 / 360));
+      line-height: calc(100vw * (55 / 360));
+    }
+
+    &__progress {
+      position: absolute;
+      inset: calc(100vw * (-27 / 360));
+    }
+  }
+}

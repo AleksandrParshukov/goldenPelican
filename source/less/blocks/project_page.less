@@ -1,113 +1,61 @@
 .project_page {
-  margin-block: 50px 60px;
+  background-color: @white-special;
+  position: relative;
 
   &__container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-  }
-
-  &__card {
-    padding: 26px;
-    background: @white;
-    box-shadow: 0px 4px 34px rgba(0, 0, 0, 0.04);
-    border-radius: 12px;
-    display: flex;
-    flex-direction: column;
+    padding-block: 285px 50px;
+    border-bottom: 1px solid @black-fade;
   }
 
   &__slider {
-    width: 578px;
-    height: 304px;
-    margin-bottom: 16px;
+    width: 1290px;
+    height: 470px;
+    position: absolute;
+    margin-inline: auto;
+    top: -235px;
+    left: 0;
+    right: 0;
   }
 
   &__img {
     width: 100%;
     height: 100%;
-    border-radius: 12px;
+    border-radius: 16px;
     overflow: hidden;
 
     > img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
     }
   }
 
-  &__name {
-    font-weight: 700;
-    font-size: 28px;
-    line-height: 30px;
-    margin-bottom: 16px;
-  }
-
-  &__text {
+  &__content {
     font-weight: 400;
-    font-size: 14px;
-    line-height: 18px;
-    margin-bottom: 30px;
-  }
-
-  &__links {
-    margin-top: 26px;
-    display: flex;
-    justify-content: space-between;
-
-    .button {
-      width: 100%;
-    }
-
-    .button--empty {
-      color: @primary;
-      margin-left: 16px;
-    }
+    font-size: 20px;
+    line-height: 25px;
   }
 }
 
 
 @media (max-width: 1440px) {
   .project_page {
-    margin-block: calc(100vw * (50 / 1440)) calc(100vw * (60 / 1440));
-
     &__container {
-      gap: calc(100vw * (30 / 1440));
-    }
-
-    &__card {
-      padding: calc(100vw * (26 / 1440));
-      box-shadow: 0px calc(100vw * (4 / 1440)) calc(100vw * (34 / 1440)) rgba(0, 0, 0, 0.04);
-      border-radius: calc(100vw * (12 / 1440));
+      padding-block: calc(100vw * (285 / 1440)) calc(100vw * (50 / 1440));
     }
 
     &__slider {
-      width: calc(100vw * (578 / 1440));
-      height: calc(100vw * (304 / 1440));
-      margin-bottom: calc(100vw * (16 / 1440));
+      width: calc(100vw * (1290 / 1440));
+      height: calc(100vw * (470 / 1440));
+      top: calc(100vw * (-235 / 1440));
     }
 
     &__img {
-      border-radius: calc(100vw * (12 / 1440));
+      border-radius: calc(100vw * (16 / 1440));
     }
 
-    &__name {
-      font-size: calc(100vw * (28 / 1440));
-      line-height: calc(100vw * (30 / 1440));
-      margin-bottom: calc(100vw * (16 / 1440));
-    }
-
-    &__text {
-      font-size: calc(100vw * (14 / 1440));
-      line-height: calc(100vw * (18 / 1440));
-      margin-bottom: calc(100vw * (30 / 1440));
-    }
-
-    &__links {
-      margin-top: calc(100vw * (26 / 1440));
-
-      .button--empty {
-        margin-left: calc(100vw * (16 / 1440));
-      }
+    &__content {
+      font-size: calc(100vw * (20 / 1440));
+      line-height: calc(100vw * (25 / 1440));
     }
   }
 }
@@ -115,50 +63,24 @@
 
 @media (max-width: 576px) {
   .project_page {
-    margin-block: calc(100vw * (30 / 360)) calc(100vw * (50 / 360));
-
     &__container {
-      grid-template-columns: 100%;
-      gap: calc(100vw * (30 / 360));
-    }
-
-    &__card {
-      padding: calc(100vw * (16 / 360)) calc(100vw * (16 / 360)) calc(100vw * (30 / 360));
-      box-shadow: 0px calc(100vw * (4 / 360)) calc(100vw * (34 / 360)) rgba(0, 0, 0, 0.04);
-      border-radius: calc(100vw * (12 / 360));
+      padding-block: calc(100vw * (155 / 360)) calc(100vw * (30 / 360));
+      border-bottom: 1px solid @black-fade;
     }
 
     &__slider {
-      width: calc(100vw * (288 / 360));
-      height: calc(100vw * (204 / 360));
-      margin-bottom: calc(100vw * (16 / 360));
+      width: calc(100vw * (320 / 360));
+      height: calc(100vw * (228 / 360));
+      top: calc(100vw * (-119 / 360));
     }
 
     &__img {
-      border-radius: calc(100vw * (12 / 360));
+      border-radius: calc(100vw * (16 / 360));
     }
 
-    &__name {
-      font-size: calc(100vw * (24 / 360));
-      line-height: calc(100vw * (30 / 360));
-      margin-bottom: calc(100vw * (8 / 360));
-    }
-
-    &__text {
+    &__content {
       font-size: calc(100vw * (14 / 360));
       line-height: calc(100vw * (18 / 360));
-      margin-bottom: calc(100vw * (16 / 360));
-    }
-
-    &__links {
-      margin-top: calc(100vw * (20 / 360));
-      display: flex;
-      flex-direction: column;
-
-      .button--empty {
-        margin-top: calc(100vw * (30 / 360));
-        margin-left: 0;
-      }
     }
   }
 }

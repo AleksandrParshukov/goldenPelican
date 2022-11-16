@@ -14,6 +14,17 @@
     position: relative;
   }
 
+  &--project {
+    padding-bottom: 285px;
+
+    .project__results {
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 30px;
+      margin-top: 20px;
+    }
+  }
+
   &__top {
     border-bottom: 1px solid @white-fade;
     display: flex;
@@ -57,6 +68,16 @@
       background-size: calc(100vw * (1298 / 1440)) auto, auto auto;
       background-position: calc(100vw * (314 / 1440)) top, center;
     }
+
+    &--project {
+      padding-bottom: calc(100vw * (285 / 1440));
+
+      .project__results {
+        font-size: calc(100vw * (24 / 1440));
+        line-height: calc(100vw * (30 / 1440));
+        margin-top: calc(100vw * (20 / 1440));
+      }
+    }
     
 
     &__logo {
@@ -86,6 +107,16 @@
       background-image: url(../img/index_banner_bg_mobile.svg), linear-gradient(124.11deg, #43BBA5 0%, #43B4BB 70.19%);
       background-size: 100% auto, auto auto;
       background-position: top center, center;
+    }
+
+    &--project {
+      padding-bottom: calc(100vw * (149 / 360));
+
+      .project__results {
+        font-size: calc(100vw * (16 / 360));
+        line-height: calc(100vw * (20 / 360));
+        margin-top: calc(100vw * (20 / 360));
+      }
     }
 
     &__top {
