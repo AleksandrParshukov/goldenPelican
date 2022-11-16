@@ -863,6 +863,9 @@ picture > img {
   }
 }
 @media (max-width: 576px) {
+  .payment:last-child {
+    margin-bottom: calc(100vw * (20 / 360));
+  }
   .payment__container {
     padding-block: calc(100vw * (20 / 360));
     border-top: 1px solid rgba(0, 0, 0, 0.2);
@@ -2145,6 +2148,42 @@ picture > img {
   .hall_of_fame__progress {
     position: absolute;
     inset: calc(100vw * (-27 / 360));
+  }
+}
+.reports .hall_of_fame__container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.reports .hall_of_fame__list {
+  margin-top: 40px;
+  margin-right: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(15, min-content);
+  gap: 20px 95px;
+  grid-auto-flow: column;
+}
+@media (max-width: 1440px) {
+  .reports .hall_of_fame__list {
+    margin-top: calc(100vw * (40 / 1440));
+    gap: calc(100vw * (20 / 1440)) calc(100vw * (95 / 1440));
+  }
+}
+@media (max-width: 576px) {
+  .reports .hall_of_fame__container {
+    margin-bottom: calc(100vw * (50 / 360));
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .reports .hall_of_fame__list {
+    margin-top: calc(100vw * (20 / 360));
+    margin-right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: calc(100vw * (14 / 360));
   }
 }
 .visually_hidden {

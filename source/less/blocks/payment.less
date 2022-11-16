@@ -111,6 +111,10 @@
 
 @media (max-width: 576px) {
   .payment {
+    &:last-child {
+      margin-bottom: calc(100vw * (20 / 360));
+    }
+
     &__container {
       padding-block: calc(100vw * (20 / 360));
       border-top: 1px solid @black-fade;

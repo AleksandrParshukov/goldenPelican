@@ -1,0 +1,56 @@
+.reports {
+  .hall_of_fame {
+    &__container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    &__list {
+      margin-top: 40px;
+      margin-right: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: repeat(15, min-content);
+      gap: 20px 95px;
+      grid-auto-flow: column;
+    }
+  }
+}
+
+
+@media (max-width: 1440px) {
+  .reports {
+    .hall_of_fame {
+
+      &__list {
+        margin-top: calc(100vw * (40 / 1440));
+        gap: calc(100vw * (20 / 1440)) calc(100vw * (95 / 1440));
+      }
+    }
+  }
+}
+
+
+
+@media (max-width: 576px) {
+  .reports {
+    .hall_of_fame {
+      &__container {
+        margin-bottom: calc(100vw * (50 / 360));
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+      }
+
+      &__list {
+        margin-top: calc(100vw * (20 / 360));
+        margin-right: 0;
+        display: flex;
+        flex-direction: column;
+        gap: calc(100vw * (14 / 360));
+      }
+    }
+  }
+}
