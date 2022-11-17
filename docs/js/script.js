@@ -9,7 +9,13 @@ function init_mobile_menu() {
   });
 }
 
-function init_sliders() {}
+function init_sliders() {
+  $('.helped__list').owlCarousel({
+    loop: false,
+    nav: true,
+    items: 4,
+  });
+}
 
 $(document).ready(function () {
   init_sliders();

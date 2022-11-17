@@ -34,16 +34,28 @@
 
 @media (max-width: 576px) {
   .projects {
-    padding-block: calc(100vw * (225 / 360)) calc(100vw * (60 / 360));
+    padding-block: calc(100vw * (225 / 360)) calc(100vw * (40 / 360));
     background: @white-special;
 
     &__list {
-      margin-top: calc(100vw * (20 / 360));
+      width: 100vw;
+      margin-top: 0;
+      margin-left: calc(100vw * (-20 / 360));
       display: flex;
+
+      .owl-stage-outer {
+        padding-block: calc(100vw * (20 / 360));
+      }
+
+      .owl-stage {
+        display: flex;
+      }
     }
 
     &__item {
-      margin-right: calc(100vw * (16 / 360));
+      width: calc(100vw * (300 / 360));
+      margin-left: calc(100vw * (20 / 360));
+      height: 100%;
     }
   }
 }

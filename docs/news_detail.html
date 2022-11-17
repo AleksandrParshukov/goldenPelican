@@ -82,7 +82,7 @@
 
     <section class="news__gallery">
       <div class="wrapper">
-        <div class="news__gallery_list owl-carousel">
+        <div class="news__gallery_list owl-carousel owl-theme">
           <div class="item">
             <img src="img/news_1.png" width="300" height="300" alt="">
           </div>
@@ -105,7 +105,7 @@
       </div>
     </section>
 
-    <section class="other_news">
+    <section class="other_news js_slider_container">
       <div class="wrapper">
         <div class="d-flex align-items-center">
           <a href="projects.html" class="h2">Другие новости</a>
@@ -119,9 +119,41 @@
             </span>
             <span class="d-none d-md-inline">Посмотреть все</span>
           </a>
-        </div>
+          <div class="section_slider_nav d-none d-md-flex">
+            <button type="button" class="slider_nav slider_nav--prev">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                <g clip-path="url(#a)">
+                  <path fill="currentColor" d="m10.83 12 4.95 4.95-1.42 1.41L8 12l6.36-6.36 1.42 1.41L10.83 12Z" />
+                </g>
+              </svg>
+            </button>
+            <button type="button" class="slider_nav slider_nav--next">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                <g clip-path="url(#a)">
+                  <path fill="currentColor" d="M13.17 12 8.22 7.05l1.42-1.41L16 12l-6.36 6.36-1.42-1.41L13.17 12Z" />
+                </g>
+              </svg>
+            </button>
+          </div>
+          </div>
+          
+          <div class="other_news__list owl-carousel owl-theme">
+            <div class="other_news__item item">
+              <img class="other_news__img" src="img/news_small.png" width="300" height="327" alt="">
+              <div class="other_news__item_content">
+                <p class="other_news__date">01.10.2022</p>
+                <a class="other_news__name">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</a>
+              </div>
+          </div>
 
-        <div class="other_news__list owl-carousel">
+          <div class="other_news__item item">
+            <img class="other_news__img" src="img/news_small.png" width="300" height="327" alt="">
+            <div class="other_news__item_content">
+              <p class="other_news__date">01.10.2022</p>
+              <a class="other_news__name">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</a>
+            </div>
+          </div>
+
           <div class="other_news__item item">
             <img class="other_news__img" src="img/news_small.png" width="300" height="327" alt="">
             <div class="other_news__item_content">
@@ -137,7 +169,7 @@
               <a class="other_news__name">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</a>
             </div>
           </div>
-
+          
           <div class="other_news__item item">
             <img class="other_news__img" src="img/news_small.png" width="300" height="327" alt="">
             <div class="other_news__item_content">

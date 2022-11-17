@@ -174,13 +174,14 @@
       background-position: center;
       flex-direction: column;
       position: fixed;
-      inset: 0;
+      left: 0;
+      right: 0;
       bottom: 100%;
       z-index: 10000;
       transition: all 0.3s ease-out;
 
       &.open {
-        transform: translateY(-100%);
+        transform: translateY(100%);
       }
     }
 

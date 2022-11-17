@@ -14,19 +14,30 @@
     border-radius: 12px;
     display: flex;
     flex-direction: column;
+    position: relative;
+  }
+
+  &__slider_nav {
+    background-color: @white-special;
+    border-radius: 47px;
+    display: flex;
+    position: absolute;
+    top: 42px;
+    right: 42px;
+    z-index: 2;
   }
 
   &__slider {
     width: 578px;
     height: 304px;
     margin-bottom: 16px;
+    border-radius: 12px;
+    overflow: hidden;
   }
 
   &__img {
     width: 100%;
     height: 100%;
-    border-radius: 12px;
-    overflow: hidden;
 
     > img {
       width: 100%;
@@ -80,13 +91,17 @@
       border-radius: calc(100vw * (12 / 1440));
     }
 
+    &__slider_nav {
+      border-radius: calc(100vw * (47 / 1440));
+      top: calc(100vw * (42 / 1440));
+      right: calc(100vw * (42 / 1440));
+    }
+
+
     &__slider {
       width: calc(100vw * (578 / 1440));
       height: calc(100vw * (304 / 1440));
       margin-bottom: calc(100vw * (16 / 1440));
-    }
-
-    &__img {
       border-radius: calc(100vw * (12 / 1440));
     }
 
@@ -128,14 +143,22 @@
       border-radius: calc(100vw * (12 / 360));
     }
 
+    &__slider_nav {
+      border-radius: calc(100vw * (47 / 360));
+      top: calc(100vw * (28 / 360));
+      right: calc(100vw * (28 / 360));
+    }
+
     &__slider {
       width: calc(100vw * (288 / 360));
       height: calc(100vw * (204 / 360));
       margin-bottom: calc(100vw * (16 / 360));
+      border-radius: calc(100vw * (12 / 360));
     }
 
     &__img {
-      border-radius: calc(100vw * (12 / 360));
+      width: calc(100vw * (288 / 360));
+      height: calc(100vw * (204 / 360));
     }
 
     &__name {

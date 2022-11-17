@@ -63,6 +63,7 @@ const copy = (done) => {
         'source/*.ico',
         'source/img/**/*.{jpg,png,svg,gif}',
         'source/css/*.css',
+        'source/css/**/*.css',
         'source/js/**/*.js',
       ],
       {

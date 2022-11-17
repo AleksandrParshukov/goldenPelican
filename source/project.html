@@ -77,11 +77,33 @@
     <section class="project_page">
       <div class="wrapper">
         <div class="project_page__container">
-          <div class="project_page__slider">
-            <div class="project_page__img">
-              <img src="img/project_1.png" width="1290" height="470" alt="">
+          <div class="project_page__slider_container js_slider_container">
+            <button type="button" class="slider_nav slider_nav--prev">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                <g clip-path="url(#a)">
+                  <path fill="currentColor" d="m10.83 12 4.95 4.95-1.42 1.41L8 12l6.36-6.36 1.42 1.41L10.83 12Z" />
+                </g>
+              </svg>
+            </button>
+            <div class="project_page__slider owl-carousel owl-theme">
+              <div class="project_page__img">
+                <img src="img/project_1.png" width="1290" height="470" alt="">
+              </div>
+              <div class="project_page__img">
+                <img src="img/project_1.png" width="1290" height="470" alt="">
+              </div>
+              <div class="project_page__img">
+                <img src="img/project_1.png" width="1290" height="470" alt="">
+              </div>
+              </div>
+              <button type="button" class="slider_nav slider_nav--next">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                  <g clip-path="url(#a)">
+                    <path fill="currentColor" d="M13.17 12 8.22 7.05l1.42-1.41L16 12l-6.36 6.36-1.42-1.41L13.17 12Z" />
+                  </g>
+                </svg>
+              </button>
             </div>
-          </div>
 
           <div class="project_page__content">
             <p>
@@ -195,6 +217,22 @@
             </span>
             <span class="d-none d-md-inline">Посмотреть больше</span>
           </a>
+          <div class="section_slider_nav d-none d-md-flex">
+            <button type="button" class="slider_nav slider_nav--prev">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                <g clip-path="url(#a)">
+                  <path fill="currentColor" d="m10.83 12 4.95 4.95-1.42 1.41L8 12l6.36-6.36 1.42 1.41L10.83 12Z" />
+                </g>
+              </svg>
+            </button>
+            <button type="button" class="slider_nav slider_nav--next">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                <g clip-path="url(#a)">
+                  <path fill="currentColor" d="M13.17 12 8.22 7.05l1.42-1.41L16 12l-6.36 6.36-1.42-1.41L13.17 12Z" />
+                </g>
+              </svg>
+            </button>
+          </div>
         </div>
 
         <div class="helped__list owl-carousel">
