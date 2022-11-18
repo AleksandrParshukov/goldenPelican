@@ -2725,6 +2725,238 @@ input[type=number]::-webkit-outer-spin-button {
     line-height: calc(100vw * (18 / 360));
   }
 }
+.payment_page {
+  padding-block: 40px 80px;
+}
+.payment_page__form {
+  display: grid;
+  column-gap: 140px;
+  grid-template-columns: 740px min-content;
+  grid-template-rows: repeat(7, min-content);
+  grid-auto-flow: column;
+}
+.payment_page__select {
+  margin-bottom: 30px;
+}
+.payment_page__amounts {
+  grid-area: auto;
+}
+.payment_page .payment__amount {
+  flex-grow: 1;
+}
+.payment_page .payment__amount--other {
+  width: 240px;
+}
+.payment_page__periods {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+  width: min-content;
+  padding: 4px;
+  margin-block: 30px 50px;
+  background-color: #F8F8F8;
+  border-radius: 12px;
+  display: flex;
+}
+.payment_page__periods label {
+  padding: 11.5px 16px;
+  border-radius: 12px;
+  width: max-content;
+}
+.payment_page__period {
+  display: none;
+}
+.payment_page__period:checked + label {
+  color: #FFFFFF;
+  background-color: #43B6B4;
+}
+.payment_page__input {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  padding: 21.5px 18px;
+  background: #F8F8F8;
+  border: 1px solid #EAEAEA;
+  border-radius: 12px;
+}
+.payment_page__input + .payment_page__input {
+  margin-top: 16px;
+}
+.payment_page__submit {
+  margin-block: 30px 23px;
+}
+.payment_page__text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+}
+.payment_page__link {
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: #43B6B4;
+  text-decoration: underline;
+}
+.payment_page__info {
+  grid-column-start: 2;
+  grid-row-start: 1;
+  grid-row-end: -1;
+}
+.payment_page__info .methods {
+  flex-direction: column;
+  align-items: flex-start;
+}
+.payment_page__info .methods__list {
+  margin-block: 20px 40px;
+  margin-left: 0;
+}
+@media (max-width: 1440px) {
+  .payment_page {
+    padding-block: calc(100vw * (40 / 1440)) calc(100vw * (80 / 1440));
+  }
+  .payment_page__form {
+    grid-template-columns: calc(100vw * (740 / 1440)) min-content;
+    grid-template-rows: repeat(8, min-content);
+    column-gap: calc(100vw * (140 / 1440));
+  }
+  .payment_page__select {
+    margin-bottom: calc(100vw * (30 / 1440));
+  }
+  .payment_page .payment__amount--other {
+    width: calc(100vw * (240 / 1440));
+  }
+  .payment_page__periods {
+    font-size: calc(100vw * (18 / 1440));
+    line-height: calc(100vw * (23 / 1440));
+    padding: calc(100vw * (4 / 1440));
+    margin-block: calc(100vw * (30 / 1440)) calc(100vw * (50 / 1440));
+    border-radius: calc(100vw * (12 / 1440));
+  }
+  .payment_page__periods label {
+    padding: calc(100vw * (11.5 / 1440)) calc(100vw * (16 / 1440));
+    border-radius: calc(100vw * (12 / 1440));
+  }
+  .payment_page__input {
+    font-size: calc(100vw * (18 / 1440));
+    line-height: calc(100vw * (23 / 1440));
+    padding: calc(100vw * (21.5 / 1440)) calc(100vw * (18 / 1440));
+    border-radius: calc(100vw * (12 / 1440));
+  }
+  .payment_page__input + .payment_page__input {
+    margin-top: calc(100vw * (16 / 1440));
+  }
+  .payment_page__submit {
+    margin-block: calc(100vw * (30 / 1440)) calc(100vw * (23 / 1440));
+  }
+  .payment_page__text {
+    font-size: calc(100vw * (14 / 1440));
+    line-height: calc(100vw * (18 / 1440));
+  }
+  .payment_page__info .methods__list {
+    margin-block: calc(100vw * (20 / 1440)) calc(100vw * (40 / 1440));
+    margin-left: 0;
+  }
+}
+@media (max-width: 576px) {
+  .payment_page {
+    padding-block: calc(100vw * (30 / 360)) calc(100vw * (40 / 360));
+  }
+  .payment_page__form {
+    grid-template-columns: 100%;
+  }
+  .payment_page__select {
+    margin-bottom: calc(100vw * (30 / 360));
+  }
+  .payment_page .payment__amount--other {
+    width: 100%;
+  }
+  .payment_page__periods {
+    font-weight: 500;
+    font-size: calc(100vw * (18 / 360));
+    line-height: calc(100vw * (23 / 360));
+    padding: calc(100vw * (4 / 360));
+    margin-block: calc(100vw * (20 / 360)) calc(100vw * (40 / 360));
+    border-radius: calc(100vw * (12 / 360));
+  }
+  .payment_page__periods label {
+    padding: calc(100vw * (11.5 / 360)) calc(100vw * (13 / 360));
+    border-radius: calc(100vw * (12 / 360));
+  }
+  .payment_page__input {
+    font-size: calc(100vw * (18 / 360));
+    line-height: calc(100vw * (23 / 360));
+    padding: calc(100vw * (21.5 / 360)) calc(100vw * (18 / 360));
+    border-radius: calc(100vw * (12 / 360));
+  }
+  .payment_page__input + .payment_page__input {
+    margin-top: calc(100vw * (16 / 360));
+  }
+  .payment_page__submit {
+    margin-block: calc(100vw * (30 / 360)) calc(100vw * (20 / 360));
+  }
+  .payment_page__text {
+    font-size: calc(100vw * (14 / 360));
+    line-height: calc(100vw * (18 / 360));
+  }
+  .payment_page__info {
+    display: flex;
+    flex-direction: column-reverse;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+  }
+  .payment_page__info .methods {
+    flex-direction: row;
+    align-items: center;
+  }
+  .payment_page__info .methods__list {
+    margin-block: calc(100vw * (20 / 360)) calc(100vw * (30 / 360));
+    margin-left: calc(100vw * (23 / 360));
+  }
+}
+.select__label {
+  margin-bottom: 16px;
+}
+.select__current,
+.select__body {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  background: #F8F8F8;
+  border-radius: 12px;
+}
+.select__current {
+  padding: 21.5px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.select__current::after {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background: transparent url(../img/select_down.svg) no-repeat center;
+}
+.select__body {
+  height: 0;
+  padding: 0 18px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  overflow: hidden;
+  transition: height 0.125s ease-in-out;
+}
+.select__option {
+  padding-bottom: 10px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+.select__option:first-child {
+  margin-top: 16px;
+}
 .visually_hidden {
   position: absolute;
   width: 1px;

@@ -79,8 +79,50 @@ function init_sliders() {
   }
 }
 
+function init_custom_select() {
+  const $selects = $('.select');
+
+  $.each($selects, function () {
+    const $select = $(this),
+      $select_current = $select.find('.select__current'),
+      $select_body = $select.find('.select__body'),
+      $select_options = $select_body.find('.select__option');
+
+    let height = 0;
+
+    $.each($select_options, function () {
+      const $item = $(this);
+
+      height += $item.outerHeight(true);
+
+      $item.on('click', function (evt) {
+        evt.preventDefault();
+
+        $select_current.html($item.html());
+
+        if ($select_body.height() !== height) {
+          $select_body.height(height);
+        } else {
+          $select_body.height(0);
+        }
+      });
+    });
+
+    $select_current.on('click', function (evt) {
+      evt.preventDefault();
+
+      if ($select_body.height() !== height) {
+        $select_body.height(height);
+      } else {
+        $select_body.height(0);
+      }
+    });
+  });
+}
+
 $(document).ready(function () {
   init_sliders();
+  init_custom_select();
 
   if (window.innerWidth <= 576) {
     init_mobile_menu();

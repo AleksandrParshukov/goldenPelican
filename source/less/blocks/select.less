@@ -1,0 +1,52 @@
+.select {
+  &__label {
+    margin-bottom: 16px;
+  }
+
+  &__current,
+  &__body {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    background: @white-special;
+    border-radius: 12px;
+  }
+
+  &__current {
+    padding: 21.5px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+
+    &::after {
+      content: "";
+      width: 24px;
+      height: 24px;
+      background: transparent url(../img/select_down.svg) no-repeat center;
+    }
+  }
+
+  &__body {
+    height: 0;
+    padding: 0 18px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    overflow: hidden;
+    transition: height 0.125s ease-in-out;
+  }
+
+  &__option {
+    padding-bottom: 10px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid @black-fade;
+    cursor: pointer;
+
+    &:first-child {
+      margin-top: 16px;
+    }
+  }
+
+}
