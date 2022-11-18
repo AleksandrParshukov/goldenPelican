@@ -756,7 +756,7 @@ input[type=number]::-webkit-outer-spin-button {
   }
 }
 .projects {
-  padding-block: 174px 60px;
+  padding-block: 174px 110px;
   background: #F8F8F8;
 }
 .projects__list {
@@ -771,7 +771,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 @media (max-width: 1440px) {
   .projects {
-    padding-block: calc(100vw * (174 / 1440)) calc(100vw * (60 / 1440));
+    padding-block: calc(100vw * (174 / 1440)) calc(100vw * (110 / 1440));
   }
   .projects__list {
     margin-top: calc(100vw * (40 / 1440));
@@ -810,6 +810,9 @@ input[type=number]::-webkit-outer-spin-button {
   border-radius: 12px;
   display: flex;
   flex-direction: column;
+  transition: all 0.3s ease;
+  transition-property: background-color, color, height, border-radius;
+  position: relative;
 }
 .project__img {
   width: 268px;
@@ -834,8 +837,40 @@ input[type=number]::-webkit-outer-spin-button {
   line-height: 20px;
   margin-top: auto;
 }
+.project__link_wrap {
+  width: 100%;
+  height: 0;
+  padding-inline: inherit;
+  background-color: #FFFFFF;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  transition: inherit;
+  display: flex;
+  overflow: hidden;
+}
 .project__link {
-  display: none;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 25px;
+  width: 100%;
+  color: #FFFFFF;
+  text-align: center;
+  padding-top: 14px;
+  border-top: 1px solid #FFFFFF;
+}
+.project:hover {
+  color: #FFFFFF;
+  background-color: #43B6B4;
+  border-radius: 12px 12px 0 0;
+  transition-property: background-color, color, height;
+}
+.project:hover .project__link_wrap {
+  height: 53px;
+  padding-bottom: 14px;
+  border-radius: 0 0 12px 12px;
+  background-color: #43B6B4;
 }
 @media (max-width: 1440px) {
   .project {
@@ -861,6 +896,19 @@ input[type=number]::-webkit-outer-spin-button {
     font-size: calc(100vw * (16 / 1440));
     line-height: calc(100vw * (20 / 1440));
   }
+  .project__link {
+    font-size: calc(100vw * (20 / 1440));
+    line-height: calc(100vw * (25 / 1440));
+    padding-top: calc(100vw * (14 / 1440));
+  }
+  .project:hover {
+    border-radius: calc(100vw * (12 / 1440)) calc(100vw * (12 / 1440)) 0 0;
+  }
+  .project:hover .project__link_wrap {
+    height: calc(100vw * (53 / 1440));
+    padding-bottom: calc(100vw * (14 / 1440));
+    border-radius: 0 0 calc(100vw * (12 / 1440)) calc(100vw * (12 / 1440));
+  }
 }
 @media (max-width: 576px) {
   .project {
@@ -885,6 +933,12 @@ input[type=number]::-webkit-outer-spin-button {
   .project__results {
     font-size: calc(100vw * (16 / 360));
     line-height: calc(100vw * (20 / 360));
+  }
+  .project__link_wrap {
+    display: none;
+  }
+  .project:hover {
+    border-radius: calc(100vw * (12 / 360));
   }
 }
 .payment--border-bottom .payment__container {
@@ -1226,6 +1280,10 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .footer__address {
   grid-area: address;
+}
+.footer__address a {
+  font: inherit;
+  color: inherit;
 }
 .footer__requisites {
   grid-area: requisites;
@@ -1588,11 +1646,11 @@ input[type=number]::-webkit-outer-spin-button {
   }
 }
 .documents {
-  padding-top: 50px;
+  padding-block: 50px;
   background: #F8F8F8;
 }
 .documents + .projects {
-  padding-top: 50px;
+  padding-top: 0;
 }
 .documents__list {
   margin-top: 30px;
@@ -1606,6 +1664,21 @@ input[type=number]::-webkit-outer-spin-button {
   background: #FFFFFF;
   box-shadow: 0px 4px 34px rgba(0, 0, 0, 0.04);
   border-radius: 12px;
+  transition: all 0.3s ease;
+  transition-property: background-color, color, height, border-radius;
+  position: relative;
+}
+.documents__item:hover {
+  color: #FFFFFF;
+  background-color: #43B6B4;
+  border-radius: 12px 12px 0 0;
+  transition-property: background-color, color, height;
+}
+.documents__item:hover .documents__link_wrap {
+  height: 53px;
+  padding-bottom: 14px;
+  border-radius: 0 0 12px 12px;
+  background-color: #43B6B4;
 }
 .documents__img {
   width: 26px;
@@ -1617,8 +1690,29 @@ input[type=number]::-webkit-outer-spin-button {
   line-height: 20px;
   margin-top: 20px;
 }
+.documents__link_wrap {
+  width: 100%;
+  height: 0;
+  padding-inline: inherit;
+  background-color: #FFFFFF;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  transition: inherit;
+  display: flex;
+  overflow: hidden;
+}
 .documents__link {
-  display: none;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 25px;
+  width: 100%;
+  color: #FFFFFF;
+  padding-top: 14px;
+  border-top: 1px solid #FFFFFF;
+  display: flex;
+  justify-content: space-between;
 }
 @media (max-width: 1440px) {
   .documents {
@@ -1637,6 +1731,14 @@ input[type=number]::-webkit-outer-spin-button {
     box-shadow: 0px calc(100vw * (4 / 1440)) calc(100vw * (34 / 1440)) rgba(0, 0, 0, 0.04);
     border-radius: calc(100vw * (12 / 1440));
   }
+  .documents__item:hover {
+    border-radius: calc(100vw * (12 / 1440)) calc(100vw * (12 / 1440)) 0 0;
+  }
+  .documents__item:hover .documents__link_wrap {
+    height: calc(100vw * (53 / 1440));
+    padding-bottom: calc(100vw * (14 / 1440));
+    border-radius: 0 0 calc(100vw * (12 / 1440)) calc(100vw * (12 / 1440));
+  }
   .documents__img {
     width: calc(100vw * (26 / 1440));
     height: calc(100vw * (31 / 1440));
@@ -1647,7 +1749,9 @@ input[type=number]::-webkit-outer-spin-button {
     margin-top: calc(100vw * (20 / 1440));
   }
   .documents__link {
-    display: none;
+    font-size: calc(100vw * (20 / 1440));
+    line-height: calc(100vw * (25 / 1440));
+    padding-top: calc(100vw * (14 / 1440));
   }
 }
 @media (max-width: 576px) {
@@ -1670,6 +1774,9 @@ input[type=number]::-webkit-outer-spin-button {
     display: flex;
     align-items: center;
   }
+  .documents__item:hover {
+    border-radius: calc(100vw * (12 / 360));
+  }
   .documents__img {
     width: calc(100vw * (26 / 360));
     height: calc(100vw * (31 / 360));
@@ -1678,9 +1785,9 @@ input[type=number]::-webkit-outer-spin-button {
     font-size: calc(100vw * (14 / 360));
     line-height: calc(100vw * (18 / 360));
     margin-top: 0;
-    margin-inline: calc(100vw * (16 / 360));
+    margin-left: calc(100vw * (16 / 360));
   }
-  .documents__link {
+  .documents__link_wrap {
     display: none;
   }
 }

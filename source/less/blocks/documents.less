@@ -1,9 +1,9 @@
 .documents {
-  padding-top: 50px;
+  padding-block: 50px;
   background: @white-special;
 
   + .projects {
-    padding-top: 50px;
+    padding-top: 0;
   }
 
   &__list {
@@ -19,6 +19,23 @@
     background: @white;
     box-shadow: 0px 4px 34px rgba(0, 0, 0, 0.04);
     border-radius: 12px;
+    transition: all 0.3s ease;
+    transition-property: background-color, color, height, border-radius;
+    position: relative;
+
+    &:hover {
+      color: @white;
+      background-color: @primary;
+      border-radius: 12px 12px 0 0;
+      transition-property: background-color, color, height;
+
+      .documents__link_wrap {
+        height: 53px;
+        padding-bottom: 14px;
+        border-radius: 0 0 12px 12px;
+        background-color: @primary;
+      }
+    }
   }
 
   &__img {
@@ -33,8 +50,30 @@
     margin-top: 20px;
   }
 
+  &__link_wrap {
+    width: 100%;
+    height: 0;
+    padding-inline: inherit;
+    background-color: @white;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    transition: inherit;
+    display: flex;
+    overflow: hidden;
+  }
+
   &__link {
-    display: none;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    width: 100%;
+    color: @white;
+    padding-top: 14px;
+    border-top: 1px solid @white;
+    display: flex;
+    justify-content: space-between;
   }
 }
 
@@ -57,6 +96,16 @@
       padding: calc(100vw * (20 / 1440));
       box-shadow: 0px calc(100vw * (4 / 1440)) calc(100vw * (34 / 1440)) rgba(0, 0, 0, 0.04);
       border-radius: calc(100vw * (12 / 1440));
+
+      &:hover {
+        border-radius: calc(100vw * (12 / 1440)) calc(100vw * (12 / 1440)) 0 0;
+
+        .documents__link_wrap {
+          height: calc(100vw * (53 / 1440));
+          padding-bottom: calc(100vw * (14 / 1440));
+          border-radius: 0 0 calc(100vw * (12 / 1440)) calc(100vw * (12 / 1440));
+        }
+      }
     }
 
     &__img {
@@ -71,7 +120,9 @@
     }
 
     &__link {
-      display: none;
+      font-size: calc(100vw * (20 / 1440));
+      line-height: calc(100vw * (25 / 1440));
+      padding-top: calc(100vw * (14 / 1440));
     }
   }
 }
@@ -98,6 +149,11 @@
       border-radius: calc(100vw * (12 / 360));
       display: flex;
       align-items: center;
+      
+
+      &:hover {
+        border-radius: calc(100vw * (12 / 360));
+      }
     }
 
     &__img {
@@ -109,10 +165,10 @@
       font-size: calc(100vw * (14 / 360));
       line-height: calc(100vw * (18 / 360));
       margin-top: 0;
-      margin-inline: calc(100vw * (16 / 360));
+      margin-left: calc(100vw * (16 / 360));
     }
 
-    &__link {
+    &__link_wrap {
       display: none;
     }
   }

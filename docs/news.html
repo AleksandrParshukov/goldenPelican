@@ -208,7 +208,7 @@
           <img src="img/bottom_logo.svg" width="291" height="74" alt="Лого">
         </a>
 
-        <a href="" class="footer__btn button button--primary">Напишите нам</a>
+        <a href="" class="footer__btn button button--primary js_modal_open">Напишите нам</a>
 
         <a href="" class="footer__social">
           <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
@@ -221,10 +221,10 @@
 
         <p class="footer__address">
           Санкт-Петербург, ул. Дыбенко, д. 25, к. 1<br>
-          тел. 633-07-95<br>
-          office@goldenpelikan.ru
+          <a href="tel:6330795">тел. 633-07-95</a><br>
+          <a href="mailto:office@goldenpelikan.ru">office@goldenpelikan.ru</a>
         </p>
-
+        
         <p class="footer__requisites">
           ОГРН 1087799004468<br>
           ИНН 7704274681&emsp;КПП 770701001<br>
@@ -233,7 +233,38 @@
       </div>
     </div>
   </footer>
+<div class="modal">
+  <div class="modal__window">
+    <div class="d-flex justify-content-between">
+      <p class="modal__title">Напишите нам</p>
 
+      <button class="modal__close">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 41" width="40" height="41" fill="none">
+          <path fill="currentColor" fill-rule="evenodd"
+            d="M5.78 6.28a1.25 1.25 0 0 1 1.77 0l26.67 26.67a1.25 1.25 0 0 1-1.77 1.77L5.78 8.05a1.25 1.25 0 0 1 0-1.77Z"
+            clip-rule="evenodd" />
+          <path fill="currentColor" fill-rule="evenodd"
+            d="M34.22 6.28c.49.5.49 1.28 0 1.77L7.55 34.72a1.25 1.25 0 1 1-1.77-1.77L32.45 6.28a1.25 1.25 0 0 1 1.77 0Z"
+            clip-rule="evenodd" />
+        </svg>
+      </button>
+      </div>
+      
+      <form class="modal__form">
+        <input class="modal__input input" type="text" placeholder="Как Вас зовут?">
+        <input class="modal__input input" type="email" placeholder="Ваш E-mail">
+        <textarea class="modal__textarea input textarea" placeholder="Текст..."></textarea>
+        <button class="modal__submit button button--primary" type="submit">Отправить</button>
+      
+        <p class="modal__note">
+          Нажимая на кнопку, вы принимаете
+          <a class="modal__link" href="">условиями оферты</a>
+          и даете согласие на обработку
+          <a class="modal__link" href="">персональных данных.</a>
+        </p>
+      </form>
+      </div>
+      </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>

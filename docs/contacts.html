@@ -70,8 +70,8 @@
           <div class="contacts__addresses">
             <h2 class="h2">Наш адрес</h2>
             <p class="contacts__address">Санкт-Петербург, ул. Дыбенко, д.&nbsp;25, к.&nbsp;1</p>
-            <p class="contacts__phone">633-07-95</p>
-            <p class="contacts__email">office@goldenpelikan.ru</p>
+            <a href="tel:6330795" class="contacts__phone">633-07-95</a>
+            <a href="mailto:office@goldenpelikan.ru" class="contacts__email">office@goldenpelikan.ru</a>
             <div class="contacts__social">
               <p>Мы в соц сетях:</p>
               <a href="" class="contacts__social_link">
@@ -91,16 +91,16 @@
               <img class="contacts__photo" src="img/contacts_person1.png" width="100" height="100" alt="">
               <p class="contacts__name">Иванова Маргарита Михайловна</p>
               <p class="contacts__position">Генеральный Директор</p>
-              <p class="contacts__phone">633-07-95</p>
-              <p class="contacts__email">office@goldenpelikan.ru</p>
+              <a href="tel:6330795" class="contacts__phone">633-07-95</a>
+              <a href="mailto:office@goldenpelikan.ru" class="contacts__email">office@goldenpelikan.ru</a>
             </div>
 
             <div class="contacts__person">
               <img class="contacts__photo" src="img/contacts_person2.png" width="100" height="100" alt="">
               <p class="contacts__name">Захаров Михаил Измайлович</p>
               <p class="contacts__position">Заместитель Директора</p>
-              <p class="contacts__phone">633-07-95</p>
-              <p class="contacts__email">office@goldenpelikan.ru</p>
+              <a href="tel:6330795" class="contacts__phone">633-07-95</a>
+              <a href="mailto:office@goldenpelikan.ru" class="contacts__email">office@goldenpelikan.ru</a>
             </div>
           </div>
 
@@ -153,7 +153,7 @@
           <img src="img/bottom_logo.svg" width="291" height="74" alt="Лого">
         </a>
 
-        <a href="" class="footer__btn button button--primary">Напишите нам</a>
+        <a href="" class="footer__btn button button--primary js_modal_open">Напишите нам</a>
 
         <a href="" class="footer__social">
           <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
@@ -166,8 +166,8 @@
 
         <p class="footer__address">
           Санкт-Петербург, ул. Дыбенко, д. 25, к. 1<br>
-          тел. 633-07-95<br>
-          office@goldenpelikan.ru
+          <a href="tel:6330795">тел. 633-07-95</a><br>
+          <a href="mailto:office@goldenpelikan.ru">office@goldenpelikan.ru</a>
         </p>
 
         <p class="footer__requisites">
@@ -179,7 +179,38 @@
     </div>
   </footer>
 
+<div class="modal">
+  <div class="modal__window">
+    <div class="d-flex justify-content-between">
+      <p class="modal__title">Напишите нам</p>
 
+      <button class="modal__close">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 41" width="40" height="41" fill="none">
+          <path fill="currentColor" fill-rule="evenodd"
+            d="M5.78 6.28a1.25 1.25 0 0 1 1.77 0l26.67 26.67a1.25 1.25 0 0 1-1.77 1.77L5.78 8.05a1.25 1.25 0 0 1 0-1.77Z"
+            clip-rule="evenodd" />
+          <path fill="currentColor" fill-rule="evenodd"
+            d="M34.22 6.28c.49.5.49 1.28 0 1.77L7.55 34.72a1.25 1.25 0 1 1-1.77-1.77L32.45 6.28a1.25 1.25 0 0 1 1.77 0Z"
+            clip-rule="evenodd" />
+        </svg>
+      </button>
+      </div>
+      
+      <form class="modal__form">
+        <input class="modal__input input" type="text" placeholder="Как Вас зовут?">
+        <input class="modal__input input" type="email" placeholder="Ваш E-mail">
+        <textarea class="modal__textarea input textarea" placeholder="Текст..."></textarea>
+        <button class="modal__submit button button--primary" type="submit">Отправить</button>
+      
+        <p class="modal__note">
+          Нажимая на кнопку, вы принимаете
+          <a class="modal__link" href="">условиями оферты</a>
+          и даете согласие на обработку
+          <a class="modal__link" href="">персональных данных.</a>
+        </p>
+      </form>
+      </div>
+      </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/OwlCarousel/owl.carousel.min.js"></script>
