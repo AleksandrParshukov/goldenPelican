@@ -6,6 +6,7 @@ function init_mobile_menu() {
     evt.preventDefault();
 
     $header__mobile.toggleClass('open');
+    $('body').toggleClass('modal_open');
   });
 }
 
@@ -79,8 +80,71 @@ function init_sliders() {
   }
 }
 
+function init_custom_select() {
+  const $selects = $('.select');
+
+  $.each($selects, function () {
+    const $select = $(this),
+      $select_current = $select.find('.select__current'),
+      $select_body = $select.find('.select__body'),
+      $select_options = $select_body.find('.select__option');
+
+    let height = 0;
+
+    $.each($select_options, function () {
+      const $item = $(this);
+
+      height += $item.outerHeight(true);
+
+      $item.on('click', function (evt) {
+        evt.preventDefault();
+
+        $select_current.html($item.html());
+
+        if ($select_body.height() !== height) {
+          $select_body.height(height);
+        } else {
+          $select_body.height(0);
+        }
+      });
+    });
+
+    $select_current.on('click', function (evt) {
+      evt.preventDefault();
+
+      if ($select_body.height() !== height) {
+        $select_body.height(height);
+      } else {
+        $select_body.height(0);
+      }
+    });
+  });
+}
+
+function init_popup() {
+  const $modal_open = $('.js_modal_open'),
+    $modal = $('.modal'),
+    $modal_close = $modal.find('.modal__close');
+
+  $modal_open.on('click', function (evt) {
+    evt.preventDefault();
+
+    $modal.addClass('open');
+    $('body').addClass('modal_open');
+  });
+
+  $modal_close.on('click', function (evt) {
+    evt.preventDefault();
+
+    $modal.removeClass('open');
+    $('body').removeClass('modal_open');
+  });
+}
+
 $(document).ready(function () {
   init_sliders();
+  init_custom_select();
+  init_popup();
 
   if (window.innerWidth <= 576) {
     init_mobile_menu();

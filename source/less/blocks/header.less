@@ -168,6 +168,7 @@
 
     &__mobile {
       height: 100vh;
+      padding-bottom: calc(100vw * (30 / 360));
       background-image: linear-gradient(124.11deg, #43BBA5 0%, #43B4BB 70.19%);
       background-repeat: no-repeat;
       background-size: auto auto;
@@ -176,12 +177,15 @@
       position: fixed;
       left: 0;
       right: 0;
-      bottom: 100%;
+      bottom: 0;
+      top: 0;
       z-index: 10000;
       transition: all 0.3s ease-out;
+      transform: translateY(-100%);
+      overflow-y: auto;
 
       &.open {
-        transform: translateY(100%);
+        transform: translateY(0%);
       }
     }
 
