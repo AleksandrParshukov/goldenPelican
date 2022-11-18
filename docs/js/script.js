@@ -124,22 +124,48 @@ function init_custom_select() {
 function init_popup() {
   const $modal_open = $('.js_modal_open'),
     $modal = $('.modal'),
+    $modal_overflow = $modal.find('.modal__overflow'),
     $modal_close = $modal.find('.modal__close');
 
   $modal_open.on('click', function (evt) {
     evt.preventDefault();
-
-    $modal.addClass('open');
-    $('body').addClass('modal_open');
+    open_modal();
   });
 
   $modal_close.on('click', function (evt) {
     evt.preventDefault();
-
-    $modal.removeClass('open');
-    $('body').removeClass('modal_open');
+    close_modal();
   });
+
+  function open_modal() {
+    $modal.addClass('open');
+    const scrollY =
+      document.documentElement.style.getPropertyValue('--scroll-y');
+    const body = document.body;
+    body.style.position = 'fixed';
+    body.style.top = `-${scrollY}`;
+    body.style.left = '0';
+    body.style.right = '0';
+  }
+
+  function close_modal() {
+    $modal.removeClass('open');
+
+    const body = document.body;
+    const scrollY = body.style.top;
+    body.style.position = '';
+    body.style.top = '';
+    window.scrollTo(0, parseInt(scrollY || '0') * -1, 'auto');
+  }
 }
+
+window.addEventListener('scroll', () => {
+  document.documentElement.style.setProperty(
+    '--scroll-y',
+    `${window.scrollY}px`
+  );
+});
+
 
 $(document).ready(function () {
   init_sliders();
