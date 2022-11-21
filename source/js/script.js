@@ -158,6 +158,23 @@ function init_popup() {
   }
 }
 
+function init_progress_bar() {
+  const $progress_bar = $('.hall_of_fame__progress');
+
+  if (!$progress_bar.length) {
+    console.log('return');
+    return false;
+  }
+
+  const current_sum = $progress_bar.data('current'),
+    goal = $progress_bar.data('goal'),
+    progress = current_sum / goal;
+
+  $progress_bar
+    .find('#fill_circle')
+    .attr('stroke-dasharray', `${progress * 251.2}, 251.2`);
+}
+
 window.addEventListener('scroll', () => {
   document.documentElement.style.setProperty(
     '--scroll-y',
@@ -165,11 +182,11 @@ window.addEventListener('scroll', () => {
   );
 });
 
-
 $(document).ready(function () {
   init_sliders();
   init_custom_select();
   init_popup();
+  init_progress_bar();
 
   if (window.innerWidth <= 576) {
     init_mobile_menu();
