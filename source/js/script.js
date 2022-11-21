@@ -168,7 +168,7 @@ function init_progress_bar() {
 
   const current_sum = $progress_bar.data('current'),
     goal = $progress_bar.data('goal'),
-    progress = current_sum / goal;
+    progress = current_sum < goal ? current_sum / goal : 1;
 
   $progress_bar
     .find('#fill_circle')
