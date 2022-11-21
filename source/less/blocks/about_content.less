@@ -81,13 +81,17 @@
       display: grid;
       grid-template-columns: 100%;
       grid-template-rows: min-content min-content;
-      gap: calc(100vw * (30 / 360));
+      gap: 0;
+    }
+
+    .load_btn {
+      margin-block: calc(100vw * (16 / 360)) calc(100vw * (30 / 360));
     }
 
     &__img {
       width: 100%;
       height: auto;
-      grid-row-start: 2;
+      grid-row-start: 3;
     }
 
     &__list {

@@ -1650,12 +1650,15 @@ input[type=number]::-webkit-outer-spin-button {
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: min-content min-content;
-    gap: calc(100vw * (30 / 360));
+    gap: 0;
+  }
+  .about_content .load_btn {
+    margin-block: calc(100vw * (16 / 360)) calc(100vw * (30 / 360));
   }
   .about_content__img {
     width: 100%;
     height: auto;
-    grid-row-start: 2;
+    grid-row-start: 3;
   }
   .about_content__list {
     display: flex;
@@ -2271,12 +2274,16 @@ input[type=number]::-webkit-outer-spin-button {
   }
   .projects_page__container {
     grid-template-columns: 100%;
-    gap: calc(100vw * (30 / 360));
+    gap: 0;
   }
   .projects_page__card {
     padding: calc(100vw * (16 / 360)) calc(100vw * (16 / 360)) calc(100vw * (30 / 360));
     box-shadow: 0px calc(100vw * (4 / 360)) calc(100vw * (34 / 360)) rgba(0, 0, 0, 0.04);
     border-radius: calc(100vw * (12 / 360));
+    margin-top: calc(100vw * (30 / 360));
+  }
+  .projects_page__card:first-child {
+    margin-top: 0;
   }
   .projects_page__slider_nav {
     border-radius: calc(100vw * (47 / 360));
@@ -2311,6 +2318,9 @@ input[type=number]::-webkit-outer-spin-button {
   .projects_page__links .button--empty {
     margin-top: calc(100vw * (30 / 360));
     margin-left: 0;
+  }
+  .projects_page .load_btn {
+    margin-top: calc(100vw * (16 / 360));
   }
 }
 .project_page {
@@ -2571,6 +2581,9 @@ input[type=number]::-webkit-outer-spin-button {
     position: absolute;
     inset: calc(100vw * (-27 / 360));
   }
+  .hall_of_fame .load_btn {
+    margin-top: calc(100vw * (14 / 360));
+  }
 }
 .reports .hall_of_fame__container {
   width: 100%;
@@ -2793,6 +2806,10 @@ input[type=number]::-webkit-outer-spin-button {
   .news__gallery_list .item img {
     width: 100%;
     height: 100%;
+  }
+  .news .load_btn {
+    width: 100%;
+    margin-top: calc(100vw * (30 / 360));
   }
 }
 .other_news {
@@ -3372,6 +3389,23 @@ body.modal_open {
 .section_slider_nav .slider_nav--prev {
   margin-right: 30px;
 }
+.load_btn {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #43B6B4;
+  padding: 20px;
+  background: #FFFFFF;
+  border: 1px solid rgba(44, 44, 44, 0.05);
+  box-shadow: 0px 4px 34px rgba(0, 0, 0, 0.04);
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+.load_btn > svg {
+  width: 24px;
+  height: 24px;
+}
 @media (max-width: 1440px) {
   .h1 {
     font-size: calc(100vw * (56 / 1440));
@@ -3415,5 +3449,16 @@ body.modal_open {
   .slider_nav {
     width: calc(100vw * (40 / 360));
     height: calc(100vw * (40 / 360));
+  }
+  .load_btn {
+    font-size: calc(100vw * (16 / 360));
+    line-height: calc(100vw * (20 / 360));
+    padding: calc(100vw * (20 / 360));
+    box-shadow: 0px calc(100vw * (4 / 360)) calc(100vw * (34 / 360)) rgba(0, 0, 0, 0.04);
+    border-radius: calc(100vw * (12 / 360));
+  }
+  .load_btn > svg {
+    width: calc(100vw * (24 / 360));
+    height: calc(100vw * (24 / 360));
   }
 }
