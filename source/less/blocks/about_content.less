@@ -1,5 +1,6 @@
 .about_content {
-  margin-top: 79px;
+  padding-bottom: 80px;
+  margin-top: 80px;
 
   &__container {
     margin-top: 39px;
@@ -41,7 +42,8 @@
 
 @media (max-width: 1440px) {
   .about_content {
-    margin-top: calc(100vw * (79 / 1440));
+    padding-bottom: calc(100vw * (80 / 1440));
+    margin-top: calc(100vw * (80 / 1440));
 
     &__container {
       margin-top: calc(100vw * (39 / 1440));
@@ -69,6 +71,7 @@
 
 @media (max-width: 576px) {
   .about_content {
+    padding-bottom: 0;
     padding-top: calc(100vw * (30 / 360));
     margin-top: 0;
     background-color: @white-special;

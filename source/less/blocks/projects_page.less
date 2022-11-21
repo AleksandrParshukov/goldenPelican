@@ -1,5 +1,6 @@
 .projects_page {
-  margin-block: 50px 60px;
+  padding-block: 50px 60px;
+  background-color: @white-special;
 
   &__container {
     display: grid;
@@ -79,7 +80,7 @@
 
 @media (max-width: 1440px) {
   .projects_page {
-    margin-block: calc(100vw * (50 / 1440)) calc(100vw * (60 / 1440));
+    padding-block: calc(100vw * (50 / 1440)) calc(100vw * (60 / 1440));
 
     &__container {
       gap: calc(100vw * (30 / 1440));
@@ -130,7 +131,7 @@
 
 @media (max-width: 576px) {
   .projects_page {
-    margin-block: calc(100vw * (30 / 360)) calc(100vw * (50 / 360));
+    padding-block: calc(100vw * (30 / 360)) calc(100vw * (50 / 360));
 
     &__container {
       grid-template-columns: 100%;

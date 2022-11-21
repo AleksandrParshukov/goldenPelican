@@ -101,21 +101,20 @@ function init_custom_select() {
 
         $select_current.html($item.html());
 
-        if ($select_body.height() !== height) {
-          $select_body.height(height);
-        } else {
-          $select_body.height(0);
-        }
+        $select_body.height(0);
+        $select_body.removeClass('open');
       });
     });
 
     $select_current.on('click', function (evt) {
       evt.preventDefault();
 
-      if ($select_body.height() !== height) {
-        $select_body.height(height);
-      } else {
+      if ($select_body.hasClass('open')) {
         $select_body.height(0);
+        $select_body.removeClass('open');
+      } else {
+        $select_body.height(height);
+        $select_body.addClass('open');
       }
     });
   });

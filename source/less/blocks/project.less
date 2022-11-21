@@ -20,6 +20,7 @@
     font-weight: 700;
     font-size: 20px;
     line-height: 25px;
+    color: inherit;
   }
 
   &__text {
@@ -152,13 +153,41 @@
       font-size: calc(100vw * (16 / 360));
       line-height: calc(100vw * (20 / 360));
     }
-
+    
     &__link_wrap {
-      display: none;
+      width: 100%;
+      height: min-content;
+      padding-inline: 0;
+      margin-top: calc(100vw * (14 / 360));
+      background-color: inherit;
+      position: static;
     }
 
+    &__link {
+      font-size: calc(100vw * (20 / 360));
+      line-height: calc(100vw * (25 / 360));
+      color: inherit;
+      padding-top: calc(100vw * (14 / 360));
+      border-top: 1px solid @black-fade;
+    }
+
+    
+
     &:hover {
+      color: @black;
+      background-color: @white;
       border-radius: calc(100vw * (12 / 360));
+      
+      transition: none;
+
+      .project__link_wrap {
+        
+        height: min-content;
+        padding-inline: 0;
+        padding-bottom: 0;
+        border-radius: 0;
+        background-color: inherit;
+      }
     }
   }
 }

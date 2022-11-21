@@ -21,9 +21,9 @@
           <img src="img/top_logo.svg" width="364" height="60" alt="Лого">
         </a>
 
-        <div class="header__burger js_menu_open d-md-none"></div>
+        <button class="header__burger js_menu_toggle d-sm-none"></button>
 
-        <nav class="main-nav d-none d-md-flex">
+        <nav class="main-nav d-none d-sm-flex">
           <ul class="main-nav__list">
             <li class="main-nav__item">
               <a class="main-nav__link" href="about.html">О нас</a>
@@ -45,7 +45,7 @@
       </div>
 
       <div class="header__content">
-        <ul class="breadcrumb d-none d-md-flex">
+        <ul class="breadcrumb d-none d-sm-flex">
           <li class="breadcrumb__item">
             <a href="index.html" class="breadcrumb__link">Главная</a>
           </li>
@@ -59,7 +59,7 @@
 
         <div class="d-flex justify-content-between align-items-center">
           <h1 class="h1">Подари рождество</h1>
-          <a href="" class="button button--white d-none d-md-flex">Помочь</a>
+          <a href="payment.html" class="button button--white d-none d-sm-flex">Помочь</a>
         </div>
 
         <p class="project__results">
@@ -69,7 +69,43 @@
           <span class="project__goal">1 000 000 ₽</span>
         </p>
       </div>
+<div class="header__mobile d-flex d-sm-none">
+  <div class="wrapper">
+    <div class="header__top">
+      <a href="" class="header__logo">
+        <img src="img/top_logo.svg" width="364" height="60" alt="Лого">
+      </a>
 
+      <button class="header__close js_menu_toggle d-sm-none"></button>
+    </div>
+
+    <nav class="main-nav">
+      <ul class="main-nav__list">
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="about.html">О нас</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="reports.html">Отчеты</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="projects.html">Программы</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="news.html">Новости</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="contacts.html">Контакты</a>
+        </li>
+      </ul>
+    </nav>
+
+
+    <div class="header__mobile_links">
+      <a href="payment.html" class="header__mobile_link button button--white">Хочу помочь</a>
+      <a href="about.html" class="header__mobile_link button">Подробнее о фонде</a>
+    </div>
+  </div>
+</div>
     </div>
   </header>
 
@@ -131,14 +167,14 @@
             <div class="d-flex align-items-center">
               <h2 class="h2">Доска почета</h2>
               <a href="reports.html" class="hall_of_fame__all section_link">
-                <span class=" d-md-none">
+                <span class=" d-sm-none">
                   <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none">
                     <path fill="#2C2C2C" fill-rule="evenodd"
                       d="M9.72 5.93a.81.81 0 0 1 1.15 0l6.5 6.5c.31.31.31.83 0 1.14l-6.5 6.5a.81.81 0 0 1-1.15-1.14L15.64 13 9.72 7.07a.81.81 0 0 1 0-1.14Z"
                       clip-rule="evenodd" />
                   </svg>
                 </span>
-                <span class="d-none d-md-inline">Все</span>
+                <span class="d-none d-sm-inline">Все</span>
               </a>
 
             </div>
@@ -202,22 +238,22 @@
       </div>
 
     </section>
-
-    <section class="helped">
+    
+    <section class="helped js_slider_container">
       <div class="wrapper">
         <div class="d-flex align-items-center">
           <a href="projects.html" class="h2">Вы уже помогли</a>
           <a href="projects.html" class="section_link">
-            <span class=" d-md-none">
+            <span class=" d-sm-none">
               <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none">
                 <path fill="#2C2C2C" fill-rule="evenodd"
                   d="M9.72 5.93a.81.81 0 0 1 1.15 0l6.5 6.5c.31.31.31.83 0 1.14l-6.5 6.5a.81.81 0 0 1-1.15-1.14L15.64 13 9.72 7.07a.81.81 0 0 1 0-1.14Z"
                   clip-rule="evenodd" />
               </svg>
             </span>
-            <span class="d-none d-md-inline">Посмотреть больше</span>
+            <span class="d-none d-sm-inline">Посмотреть больше</span>
           </a>
-          <div class="section_slider_nav d-none d-md-flex">
+          <div class="section_slider_nav d-none d-sm-flex">
             <button type="button" class="slider_nav slider_nav--prev">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
                 <g clip-path="url(#a)">
@@ -235,11 +271,13 @@
           </div>
         </div>
 
-        <div class="helped__list owl-carousel">
+        <div class="helped__list owl-carousel owl-theme">
           <div class="helped__item item">
             <p class="helped__project" style="background-color: #43BB90;">Новые горизонты</p>
-            <img class="helped__img" src="img/helped_1.jpg" width="300" height="200" alt="">
-            <p class="helped__caption">Ремонт коляски</p>
+            <a href="">
+              <img class="helped__img" src="img/helped_1.jpg" width="300" height="200" alt="">
+            </a>
+            <a href="" class="helped__caption">Ремонт коляски</a>
             <p class="helped__text">
               В рамках программы “Новые Горизонты” участники Движения провели ремонт и техническое обслуживание
               инвалидной техники в
@@ -249,8 +287,10 @@
 
           <div class="helped__item item">
             <p class="helped__project" style="background-color: #ED695B;">Добрый Клоун</p>
-            <img class="helped__img" src="img/helped_2.jpg" width="300" height="200" alt="">
-            <p class="helped__caption">Августовские посещения “Добрый Клоун”</p>
+            <a href="">
+              <img class="helped__img" src="img/helped_2.jpg" width="300" height="200" alt="">
+            </a>
+            <a href="" class="helped__caption">Августовские посещения “Добрый Клоун”</a>
             <p class="helped__text">
               В августе в рамках программы “Добрый Клоун” участники Движения посетили 2 семьи, подпечных СПб ГАУЗ
               “Хоспис (детский)”.
@@ -260,8 +300,10 @@
 
           <div class="helped__item item">
             <p class="helped__project" style="background-color: #43BB90;">Новые горизонты</p>
-            <img class="helped__img" src="img/helped_3.jpg" width="300" height="200" alt="">
-            <p class="helped__caption">Новые Горизонты и #ДелаБлагие</p>
+            <a href="">
+              <img class="helped__img" src="img/helped_3.jpg" width="300" height="200" alt="">
+            </a>
+            <a href="" class="helped__caption">Новые Горизонты и #ДелаБлагие</a>
             <p class="helped__text">
               Благодаря поддержке Северо-Западная ТЭЦ им. А. Г. Бориса #ДелаБлагие волонтёрами нашего Движения были
               закуплены
@@ -271,8 +313,10 @@
 
           <div class="helped__item item">
             <p class="helped__project" style="background-color: #FF8F27;">Доктор Музыка</p>
-            <img class="helped__img" src="img/helped_4.jpg" width="300" height="200" alt="">
-            <p class="helped__caption">Мартовские посещения “Доктор Музыка”</p>
+            <a href="">
+              <img class="helped__img" src="img/helped_4.jpg" width="300" height="200" alt="">
+            </a>
+            <a href="" class="helped__caption">Мартовские посещения “Доктор Музыка”</a>
             <p class="helped__text">
               В марте в рамках программы “Доктор Музыка” участники Движения посетили 2 семьи, подпечных СПб ГАУЗ “Хоспис
               (детский)”.
@@ -283,7 +327,6 @@
 
       </div>
     </section>
-
     <section class="payment">
       <div class="wrapper">
         <div class="payment__container">
@@ -291,7 +334,7 @@
             <button class="payment__amount button">250 ₽</button>
             <button class="payment__amount button">500 ₽</button>
             <button class="payment__amount button">750 ₽</button>
-            <button class="payment__amount button d-none d-md-flex">1000 ₽</button>
+            <button class="payment__amount button d-none d-sm-flex">1000 ₽</button>
             <input class="payment__amount payment__amount--other button" type="number" placeholder="Другая сумма">
           </div>
 

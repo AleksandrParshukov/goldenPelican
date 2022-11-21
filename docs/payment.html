@@ -21,9 +21,9 @@
           <img src="img/top_logo.svg" width="364" height="60" alt="Лого">
         </a>
 
-        <div class="header__burger js_menu_open d-md-none"></div>
+        <button class="header__burger js_menu_toggle d-sm-none"></button>
 
-        <nav class="main-nav d-none d-md-flex">
+        <nav class="main-nav d-none d-sm-flex">
           <ul class="main-nav__list">
             <li class="main-nav__item">
               <a class="main-nav__link" href="about.html">О нас</a>
@@ -50,7 +50,43 @@
           <h1 class="h1">Cделать пожертвование</h1>
         </div>
       </div>
+<div class="header__mobile d-flex d-sm-none">
+  <div class="wrapper">
+    <div class="header__top">
+      <a href="" class="header__logo">
+        <img src="img/top_logo.svg" width="364" height="60" alt="Лого">
+      </a>
 
+      <button class="header__close js_menu_toggle d-sm-none"></button>
+    </div>
+
+    <nav class="main-nav">
+      <ul class="main-nav__list">
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="about.html">О нас</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="reports.html">Отчеты</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="projects.html">Программы</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="news.html">Новости</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="contacts.html">Контакты</a>
+        </li>
+      </ul>
+    </nav>
+
+
+    <div class="header__mobile_links">
+      <a href="payment.html" class="header__mobile_link button button--white">Хочу помочь</a>
+      <a href="about.html" class="header__mobile_link button">Подробнее о фонде</a>
+    </div>
+    </div>
+    </div>
     </div>
   </header>
 
@@ -87,7 +123,7 @@
             <button class="payment__amount button">250 ₽</button>
             <button class="payment__amount button">500 ₽</button>
             <button class="payment__amount button">750 ₽</button>
-            <button class="payment__amount button d-none d-md-flex">1000 ₽</button>
+            <button class="payment__amount button d-none d-sm-flex">1000 ₽</button>
             <input class="payment__amount payment__amount--other button" type="number" placeholder="Другая сумма">
           </div>
 
