@@ -28,6 +28,7 @@
     width: 97px;
     padding-block: 21.5px;
     background-color: @white-special;
+    transition: color 0.125s ease;
 
     &--other {
       text-align: center;
@@ -40,7 +41,7 @@
     }
 
     &:hover {
-      color: @black;
+      color: @hover-gray;
     }
   }
 
@@ -62,6 +63,10 @@
     &--grid {
       grid-area: link;
       justify-self: center;
+    }
+
+    &:hover {
+      color: @hover-primary;
     }
   }
 

@@ -29,6 +29,10 @@ body.modal_open {
   line-height: 50px;
   color: @black;
   margin-bottom: 0;
+
+  &:hover {
+    color: @black;
+  }
 }
 
 .wrapper {
@@ -42,10 +46,6 @@ body.modal_open {
   text-transform: uppercase;
   color: @black;
   margin-left: auto;
-
-  &:hover {
-    color: @black;
-  }
 }
 
 .slider_nav {
@@ -56,6 +56,11 @@ body.modal_open {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: color 0.125s ease;
+
+  &:hover {
+    color: @hover-gray;
+  }
 }
 
 .section_slider_nav {

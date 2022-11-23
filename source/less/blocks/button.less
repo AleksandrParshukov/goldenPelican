@@ -9,6 +9,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: color 0.125s ease;
 
   &:hover {
     color: @white;
@@ -19,17 +20,25 @@
     background-color: @white;
     
     &:hover {
-      color: @black;
+      color: @hover-white;
     }
   }
 
   &--empty {
     background-color: transparent;
     border: 2px solid currentColor;
+    
+    &:hover {
+      color: @hover-white;
+    }
   }
 
   &--primary {
     background-color: @primary;
+    
+    &:hover {
+      color: @hover-primary;
+    }
   }
 }
 

@@ -42,9 +42,10 @@ input {
 }
 a {
   color: #2c2c2c;
+  transition: color 0.125s ease;
 }
 a:hover {
-  color: #2c2c2c;
+  color: #F0EFEF;
 }
 input:focus {
   outline: none;
@@ -128,6 +129,7 @@ input[type=number]::-webkit-outer-spin-button {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: color 0.125s ease;
 }
 .button:hover {
   color: #FFFFFF;
@@ -137,14 +139,20 @@ input[type=number]::-webkit-outer-spin-button {
   background-color: #FFFFFF;
 }
 .button--white:hover {
-  color: #2c2c2c;
+  color: #D2FFF7;
 }
 .button--empty {
   background-color: transparent;
   border: 2px solid currentColor;
 }
+.button--empty:hover {
+  color: #D2FFF7;
+}
 .button--primary {
   background-color: #43B6B4;
+}
+.button--primary:hover {
+  color: #279A98;
 }
 @media (max-width: 1440px) {
   .button {
@@ -418,9 +426,10 @@ input[type=number]::-webkit-outer-spin-button {
   font-size: 16px;
   line-height: 20px;
   color: #FFFFFF;
+  transition: color 0.125s ease;
 }
 .main-nav__link:hover {
-  color: #FFFFFF;
+  color: #D2FFF7;
 }
 @media (max-width: 1440px) {
   .main-nav__list {
@@ -827,7 +836,10 @@ input[type=number]::-webkit-outer-spin-button {
   font-weight: 700;
   font-size: 20px;
   line-height: 25px;
-  color: inherit;
+  color: #2c2c2c;
+}
+.project__title:hover {
+  color: #2c2c2c;
 }
 .project__text {
   font-weight: 400;
@@ -869,6 +881,12 @@ input[type=number]::-webkit-outer-spin-button {
   background-color: #43B6B4;
   border-radius: 12px 12px 0 0;
   transition-property: background-color, color, height;
+}
+.project:hover .project__title {
+  color: #FFFFFF;
+}
+.project:hover .project__title:hover {
+  color: #FFFFFF;
 }
 .project:hover .project__link_wrap {
   height: 53px;
@@ -991,6 +1009,7 @@ input[type=number]::-webkit-outer-spin-button {
   width: 97px;
   padding-block: 21.5px;
   background-color: #F8F8F8;
+  transition: color 0.125s ease;
 }
 .payment__amount--other {
   text-align: center;
@@ -1001,7 +1020,7 @@ input[type=number]::-webkit-outer-spin-button {
   color: #2c2c2c;
 }
 .payment__amount:hover {
-  color: #2c2c2c;
+  color: #F0EFEF;
 }
 .payment__btn {
   justify-self: end;
@@ -1019,6 +1038,9 @@ input[type=number]::-webkit-outer-spin-button {
 .payment__link--grid {
   grid-area: link;
   justify-self: center;
+}
+.payment__link:hover {
+  color: #279A98;
 }
 .payment__text {
   font-weight: 400;
@@ -2228,6 +2250,9 @@ input[type=number]::-webkit-outer-spin-button {
   color: #43B6B4;
   margin-left: 16px;
 }
+.projects_page__links .button--empty:hover {
+  color: #279A98;
+}
 @media (max-width: 1440px) {
   .projects_page {
     padding-block: calc(100vw * (50 / 1440)) calc(100vw * (60 / 1440));
@@ -2994,6 +3019,9 @@ input[type=number]::-webkit-outer-spin-button {
   color: #43B6B4;
   text-decoration: underline;
 }
+.payment_page__link:hover {
+  color: #279A98;
+}
 .payment_page__info {
   grid-column-start: 2;
   grid-row-start: 1;
@@ -3359,6 +3387,9 @@ body.modal_open {
   color: #2c2c2c;
   margin-bottom: 0;
 }
+.h2:hover {
+  color: #2c2c2c;
+}
 .wrapper {
   width: 1290px;
   margin-inline: auto;
@@ -3370,9 +3401,6 @@ body.modal_open {
   color: #2c2c2c;
   margin-left: auto;
 }
-.section_link:hover {
-  color: #2c2c2c;
-}
 .slider_nav {
   width: 40px;
   height: 40px;
@@ -3381,6 +3409,10 @@ body.modal_open {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: color 0.125s ease;
+}
+.slider_nav:hover {
+  color: #F0EFEF;
 }
 .section_slider_nav {
   display: flex;

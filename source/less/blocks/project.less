@@ -20,7 +20,11 @@
     font-weight: 700;
     font-size: 20px;
     line-height: 25px;
-    color: inherit;
+    color: @black;
+
+    &:hover {
+      color: @black;
+    }
   }
 
   &__text {
@@ -68,6 +72,14 @@
     border-radius: 12px 12px 0 0;
     
     transition-property: background-color, color, height;
+
+    .project__title {
+      color: @white;
+
+      &:hover {
+        color: @white;
+      }
+    }
 
     .project__link_wrap {
       height: 53px;
