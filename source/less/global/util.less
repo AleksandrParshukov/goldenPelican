@@ -46,6 +46,10 @@ body.modal_open {
   text-transform: uppercase;
   color: @black;
   margin-left: auto;
+
+  &:hover {
+    color: @hover-primary;
+  }
 }
 
 .slider_nav {
@@ -56,10 +60,10 @@ body.modal_open {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: color 0.125s ease;
+  transition: background-color @hover-transition-duration ease;
 
   &:hover {
-    color: @hover-gray;
+    background-color: @hover-gray;
   }
 }
 

@@ -28,7 +28,7 @@
     width: 97px;
     padding-block: 21.5px;
     background-color: @white-special;
-    transition: color 0.125s ease;
+    transition: background-color @hover-transition-duration ease;
 
     &--other {
       text-align: center;
@@ -40,8 +40,8 @@
       }
     }
 
-    &:hover {
-      color: @hover-gray;
+    &:hover, &:focus {
+      background-color: @hover-gray;
     }
   }
 

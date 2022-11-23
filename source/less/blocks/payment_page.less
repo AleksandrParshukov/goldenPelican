@@ -39,6 +39,11 @@
       padding: 11.5px 16px;
       border-radius: 12px;
       width: max-content;
+      transition: background-color @hover-transition-duration ease;
+
+      &:hover, &:focus {
+        background-color: @hover-gray;
+      }
     }
   }
 
