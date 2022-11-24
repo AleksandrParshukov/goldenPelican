@@ -1,5 +1,5 @@
 .other_news {
-  margin-block: 70px 60px;
+  padding-block: 70px 60px;
 
   &__list {
     margin-top: 40px;
@@ -8,15 +8,18 @@
 
   &__item {
     width: 300px;
+    background: @white;
+    border-radius: 12px;
     position: relative;
     display: flex;
     flex-direction: column;
     margin-right: 30px;
-
-    &:last-child {
-      margin-right: 0;
-    }
   }
+
+  .owl-item:last-child .other_news__item {
+    margin-right: 0;
+  }
+
   &__img {
     width: 300px;
     height: 200px;
@@ -48,7 +51,7 @@
 
 @media (max-width: 1440px) {
   .other_news {
-    margin-block: calc(100vw * (60 / 1440)) calc(100vw * (87 / 1440));
+    padding-block: calc(100vw * (60 / 1440)) calc(100vw * (87 / 1440));
 
     &__list {
       margin-top: calc(100vw * (40 / 1440));
@@ -57,15 +60,7 @@
     &__item {
       width: calc(100vw * (300 / 1440));
       margin-right: calc(100vw * (30 / 1440));
-    }
-
-    &__project {
-      font-size: calc(100vw * (12 / 1440));
-      line-height: calc(100vw * (15 / 1440));
-      padding: calc(100vw * (4 / 1440)) calc(100vw * (12 / 1440));
-      border-radius: calc(100vw * (6 / 1440));
-      top: calc(100vw * (8 / 1440));
-      left: calc(100vw * (8 / 1440));
+      border-radius: calc(100vw * (12 / 1440));
     }
 
     &__img {
@@ -96,7 +91,8 @@
 
 @media (max-width: 576px) {
   .other_news {
-    margin-block: calc(100vw * (40 / 360)) calc(100vw * (60 / 360));
+    padding-block: calc(100vw * (40 / 360)) calc(100vw * (60 / 360));
+    background-color: @white-special;
 
     &__list {
       width: 100vw;
@@ -108,16 +104,11 @@
     &__item {
       width: calc(100vw * (300 / 360));
       margin-left: calc(100vw * (20 / 360));
+      border-radius: calc(100vw * (12 / 360));
     }
 
-    &__project {
-      font-size: calc(100vw * (12 / 360));
-      line-height: calc(100vw * (15 / 360));
-      color: @white;
-      padding: calc(100vw * (4 / 360)) calc(100vw * (12 / 360));
-      border-radius: calc(100vw * (6 / 360));
-      top: calc(100vw * (8 / 360));
-      left: calc(100vw * (8 / 360));
+    &__item_content {
+      padding: calc(100vw * (12 / 360));
     }
 
     &__img {
@@ -130,7 +121,7 @@
       font-weight: 400;
       font-size: calc(100vw * (14 / 360));
       line-height: calc(100vw * (18 / 360));
-      margin-block: calc(100vw * (16 / 360));
+      margin-block: 0 calc(100vw * (16 / 360));
     }
 
     &__name {

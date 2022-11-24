@@ -11,13 +11,21 @@
   align-items: center;
   transition: all @hover-transition-duration ease;
 
+  &:hover, &:focus {
+    color: @white;
+  }
+
   &--white {
     color: @black;
     background-color: @white;
     
     &:hover, &:focus {
       color: @black;
-      background-color: @hover-white;
+
+      @media (min-width: 576px) {
+        color: @black;
+        background-color: @hover-white;
+      }
     }
   }
 
@@ -26,7 +34,9 @@
     border: 2px solid currentColor;
     
     &:hover, &:focus {
-      color: @hover-white;
+      @media (min-width: 576px) {
+        color: @hover-white;
+      }
     }
   }
 
@@ -34,8 +44,10 @@
     background-color: @primary;
     
     &:hover, &:focus {
-      color: @white;
-      background-color: @hover-primary;
+      @media (min-width: 576px) {
+        color: @white;
+        background-color: @hover-primary;
+      }
     }
   }
 }
@@ -63,18 +75,10 @@
     display: flex;
     justify-content: center;
 
-    &:hover, &:focus {
-      color: @white;
-    }
-
     &--white {
       color: @black;
       background-color: @white;
       border: 2px solid @white;
-      
-      &:hover, &:focus {
-        color: @black;
-      }
     }
 
     &--empty {

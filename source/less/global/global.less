@@ -46,10 +46,14 @@ a, input {
 a {
   color: @black;
   transition: color @hover-transition-duration ease;
-}
 
-a:hover {
-  color: @hover-primary;
+  &:hover {
+    color: @black;
+
+    @media (min-width: 576px) {
+      color: @hover-primary;
+    }
+  }
 }
 
 input:focus {

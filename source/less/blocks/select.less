@@ -29,7 +29,7 @@
 
   &__body {
     height: 0;
-    padding: 0 18px;
+    padding: 0 10px;
     margin-top: 10px;
     display: flex;
     flex-direction: column;
@@ -39,14 +39,19 @@
   }
 
   &__option {
-    padding-bottom: 10px;
-    margin-bottom: 16px;
+    padding: 12px 8px;
+    margin-bottom: 12px;
     border-radius: 12px;
-
     cursor: pointer;
 
     &:first-child {
-      margin-top: 16px;
+      margin-top: 12px;
+    }
+
+    &:hover {
+      @media (min-width: 576px) {
+        background-color: @hover-gray;
+      }
     }
   }
 }
@@ -82,11 +87,11 @@
     }
 
     &__option {
-      padding-bottom: calc(100vw * (10 / 1440));
-      margin-bottom: calc(100vw * (16 / 1440));
+      padding: calc(100vw * (12 / 1440)) calc(100vw * (8 / 1440));
+      margin-bottom: calc(100vw * (12 / 1440));
 
       &:first-child {
-        margin-top: calc(100vw * (16 / 1440));
+        margin-top: calc(100vw * (12 / 1440));
       }
     }
   }
@@ -122,12 +127,12 @@
     }
 
     &__option {
-      padding-bottom: calc(100vw * (10 / 360));
-      margin-bottom: calc(100vw * (16 / 360));
+      padding: calc(100vw * (8 / 360));
+      margin-bottom: calc(100vw * (10 / 360));
       border-radius: calc(100vw * (12 / 360));
       
       &:first-child {
-        margin-top: calc(100vw * (16 / 360));
+        margin-top: calc(100vw * (10 / 360));
       }
     }
   }

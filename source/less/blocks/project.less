@@ -21,10 +21,6 @@
     font-size: 20px;
     line-height: 25px;
     color: @black;
-
-    &:hover {
-      color: @black;
-    }
   }
 
   &__text {
@@ -192,8 +188,15 @@
       
       transition: none;
 
+      .project__title {
+        color: @black;
+
+        &:hover {
+          color: @black;
+        }
+      }
+
       .project__link_wrap {
-        
         height: min-content;
         padding-inline: 0;
         padding-bottom: 0;

@@ -41,7 +41,11 @@
     }
 
     &:hover, &:focus {
-      background-color: @hover-gray;
+      color: @black;
+
+      @media (min-width: 576px) {
+        background-color: @hover-gray;
+      }
     }
   }
 

@@ -14,22 +14,18 @@ function init_sliders() {
   const $slider_nav = $('.slider_nav');
 
   $('.helped__list, .other_news__list').owlCarousel({
-    loop: false,
-    dots: false,
-    responsive: {
-      0: {
-        items: 1,
-        autoWidth: true,
-      },
-      576: {
-        items: 3,
-        autoWidth: false,
-      },
-      992: {
-        items: 4,
-      },
-    },
-  });
+		loop: false,
+		dots: false,
+		autoWidth: true,
+		responsive: {
+			0: {
+				items: 1,
+			},
+			576: {
+				items: 4,
+			},
+		},
+	});
 
   $('.projects_page__slider').owlCarousel({
     loop: false,
