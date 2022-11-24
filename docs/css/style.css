@@ -42,7 +42,7 @@ input {
 }
 a {
   color: #2c2c2c;
-  transition: color 0.125s ease;
+  transition: color 250ms ease;
 }
 a:hover {
   color: #279A98;
@@ -129,7 +129,7 @@ input[type=number]::-webkit-outer-spin-button {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: background-color 125ms ease;
+  transition: all 250ms ease;
 }
 .button--white {
   color: #2c2c2c;
@@ -430,7 +430,7 @@ input[type=number]::-webkit-outer-spin-button {
   font-size: 16px;
   line-height: 20px;
   color: #FFFFFF;
-  transition: color 0.125s ease;
+  transition: color 250ms ease;
 }
 .main-nav__link:hover {
   color: #D2FFF7;
@@ -1013,7 +1013,7 @@ input[type=number]::-webkit-outer-spin-button {
   width: 97px;
   padding-block: 21.5px;
   background-color: #F8F8F8;
-  transition: background-color 125ms ease;
+  transition: background-color 250ms ease;
 }
 .payment__amount--other {
   text-align: center;
@@ -3009,7 +3009,7 @@ input[type=number]::-webkit-outer-spin-button {
   padding: 11.5px 16px;
   border-radius: 12px;
   width: max-content;
-  transition: background-color 125ms ease;
+  transition: background-color 250ms ease;
 }
 .payment_page__periods label:hover,
 .payment_page__periods label:focus {
@@ -3171,7 +3171,7 @@ input[type=number]::-webkit-outer-spin-button {
   flex-direction: column;
   box-sizing: border-box;
   overflow: hidden;
-  transition: height 0.125s ease-in-out;
+  transition: height 250ms ease-in-out;
 }
 .select__option {
   padding-bottom: 10px;
@@ -3430,7 +3430,7 @@ body.modal_open {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 125ms ease;
+  transition: background-color 250ms ease;
 }
 .slider_nav:hover {
   background-color: #F0EFEF;
