@@ -144,9 +144,8 @@
         <h2 class="h2">Что мы делаем</h2>
 
         <div class="about_content__container">
-          <img class="about_content__img" src="img/about_img.png" width="630" height="772" alt="">
-          <ul class="about_content__list">
-            <li class="about_content__item">
+          <ul id="about_list" class="about_content__list dropdown" data-items_to_show="3">
+            <li class="about_content__item mobile_visible">
               <p class="about_content__text">
                 Осуществляет поддержку организаций, обществ и объединений ветеранов ВОВ, инвалидов и жителей блокадного
                 Ленинграда.
@@ -157,7 +156,7 @@
               </p>
             </li>
 
-            <li class="about_content__item">
+            <li class="about_content__item mobile_visible">
               <p class="about_content__text">
                 Оказывает содействие в реабилитации, обучении, организации досуга и проведении культурных мероприятий
                 для детских
@@ -169,7 +168,7 @@
               </p>
             </li>
 
-            <li class="about_content__item">
+            <li class="about_content__item mobile_visible">
               <p class="about_content__text">
                 Является учредителем: Союза Общественных Благотворительных Организаций «Гражданская Социальная
                 Инициатива», Городского
@@ -220,7 +219,7 @@
               </p>
             </li>
           </ul>
-          <button class="load_btn d-sm-none">
+          <button class="load_btn d-sm-none" data-for="about_list">
             <span>Показать все</span>
           
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none">
@@ -230,6 +229,7 @@
                 d="M4.25 12c0-.41.34-.75.75-.75h14a.75.75 0 0 1 0 1.5H5a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
             </svg>
           </button>
+          <img class="about_content__img" src="img/about_img.png" width="630" height="772" alt="">
         </div>
       </div>
     </section>

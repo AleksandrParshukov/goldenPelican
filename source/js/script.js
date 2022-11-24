@@ -117,74 +117,112 @@ function init_custom_select() {
 }
 
 function init_popup() {
-  const $modal_open = $('.js_modal_open'),
-    $modal = $('.modal'),
-    $modal_overflow = $modal.find('.modal__overflow'),
-    $modal_close = $modal.find('.modal__close');
+	const $modal_open = $('.js_modal_open'),
+		$modal = $('.modal'),
+		$modal_overflow = $modal.find('.modal__overflow'),
+		$modal_close = $modal.find('.modal__close');
 
-  $modal_open.on('click', function (evt) {
-    evt.preventDefault();
-    open_modal();
-  });
+	$modal_open.on('click', function (evt) {
+		evt.preventDefault();
+		open_modal();
+	});
 
-  $modal_close.on('click', function (evt) {
-    evt.preventDefault();
-    close_modal();
-  });
+	$modal_close.on('click', function (evt) {
+		evt.preventDefault();
+		close_modal();
+	});
 
-  function open_modal() {
-    $modal.addClass('open');
-    const scrollY =
-      document.documentElement.style.getPropertyValue('--scroll-y');
-    const body = document.body;
-    body.style.position = 'fixed';
-    body.style.top = `-${scrollY}`;
-    body.style.left = '0';
-    body.style.right = '0';
-  }
+	function open_modal() {
+		$modal.addClass('open');
+		const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
+		const body = document.body;
+		body.style.position = 'fixed';
+		body.style.top = `-${scrollY}`;
+		body.style.left = '0';
+		body.style.right = '0';
+	}
 
-  function close_modal() {
-    $modal.removeClass('open');
+	function close_modal() {
+		$modal.removeClass('open');
 
-    const body = document.body;
-    const scrollY = body.style.top;
-    body.style.position = '';
-    body.style.top = '';
-    window.scrollTo(0, parseInt(scrollY || '0') * -1, 'auto');
-  }
+		const body = document.body;
+		const scrollY = body.style.top;
+		body.style.position = '';
+		body.style.top = '';
+		window.scrollTo(0, parseInt(scrollY || '0') * -1, 'auto');
+	}
+
+	window.addEventListener('scroll', () => {
+		document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
+	});
 }
 
 function init_progress_bar() {
-  const $progress_bar = $('.hall_of_fame__progress');
+	const $progress_bar = $('.hall_of_fame__progress');
 
-  if (!$progress_bar.length) {
-    console.log('return');
-    return false;
-  }
+	if (!$progress_bar.length) {
+		return false;
+	}
 
-  const current_sum = $progress_bar.data('current'),
-    goal = $progress_bar.data('goal'),
-    progress = current_sum < goal ? current_sum / goal : 1;
+	const current_sum = $progress_bar.data('current'),
+		goal = $progress_bar.data('goal'),
+		progress = current_sum < goal ? current_sum / goal : 1;
 
-  $progress_bar
-    .find('#fill_circle')
-    .attr('stroke-dasharray', `${progress * 251.2}, 251.2`);
+	$progress_bar.find('#fill_circle').attr('stroke-dasharray', `${progress * 251.2}, 251.2`);
 }
 
-window.addEventListener('scroll', () => {
-  document.documentElement.style.setProperty(
-    '--scroll-y',
-    `${window.scrollY}px`
-  );
-});
+function init_list_loader() {
+	const $load_btns = $('.load_btn');
+
+	$.each($load_btns, function () {
+		const $load_btn = $(this),
+			$list = $(`#${$load_btn.data('for')}`),
+			items_to_show = $list.data('items_to_show');
+
+		$list.height(get_visible_height());
+
+		$load_btn.on('click', function (evt) {
+			evt.preventDefault();
+
+			const $hidden_items = $list.children(':not(.mobile_visible)');
+			for (let i = 0; i < items_to_show; i++) {
+				$($hidden_items[i]).addClass('mobile_visible');
+			}
+
+			if ($hidden_items.length < items_to_show) {
+				$load_btn.slideUp(500, function () {
+					$load_btn.remove();
+				});
+			}
+
+			$list.height(get_visible_height());
+		});
+
+		function get_visible_height() {
+			const $visible_items = $list.children('.mobile_visible');
+			let height = 0;
+
+			$.each($visible_items, function () {
+				const $item = $(this);
+
+				height += $item.outerHeight(true);
+				console.log(`cur: ${$item.outerHeight(true)}`);
+				console.log(`tot: ${height}`);
+			});
+
+			return height;
+		}
+	});
+}
 
 $(document).ready(function () {
-  init_sliders();
-  init_custom_select();
-  init_popup();
-  init_progress_bar();
+	init_sliders();
+	init_custom_select();
+	init_popup();
+	init_progress_bar();
 
-  if (window.innerWidth <= 576) {
-    init_mobile_menu();
-  }
+	if (window.innerWidth <= 576) {
+		init_mobile_menu();
+		init_list_loader();
+	}
 });

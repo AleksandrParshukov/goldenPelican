@@ -3,6 +3,11 @@
   background-color: @white-special;
 
   &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__list {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
@@ -96,7 +101,7 @@
   .projects_page {
     padding-block: calc(100vw * (50 / 1440)) calc(100vw * (60 / 1440));
 
-    &__container {
+    &__list {
       gap: calc(100vw * (30 / 1440));
     }
 
@@ -147,18 +152,18 @@
   .projects_page {
     padding-block: calc(100vw * (30 / 360)) calc(100vw * (50 / 360));
 
-    &__container {
-      grid-template-columns: 100%;
-      gap: 0;
+    &__list {
+      display: flex;
+      flex-direction: column;
     }
 
     &__card {
       padding: calc(100vw * (16 / 360)) calc(100vw * (16 / 360)) calc(100vw * (30 / 360));
       box-shadow: 0px calc(100vw * (4 / 360)) calc(100vw * (34 / 360)) rgba(0, 0, 0, 0.04);
       border-radius: calc(100vw * (12 / 360));
-      margin-top: calc(100vw * (30 / 360));
+      margin-bottom: calc(100vw * (30 / 360));
 
-      &:first-child {
+      &:last-child {
         margin-top: 0;
       }
     }
@@ -202,10 +207,6 @@
         margin-top: calc(100vw * (30 / 360));
         margin-left: 0;
       }
-    }
-    
-    .load_btn {
-      margin-top: calc(100vw * (16 / 360));
     }
   }
 }

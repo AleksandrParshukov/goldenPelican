@@ -49,7 +49,15 @@
         margin-right: 0;
         display: flex;
         flex-direction: column;
-        gap: calc(100vw * (14 / 360));
+        gap: 0;
+      }
+
+      &__item {
+        margin-bottom: calc(100vw * (14 / 360));
+
+        &:last-child {
+          margin-bottom: 0;
+        }
       }
     }
   }

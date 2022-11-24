@@ -12,12 +12,15 @@
   &__img {
     width: 100%;
     height: auto;
+    grid-column-start: 1;
+    grid-row-start: 1;
   }
 
   &__list {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    grid-column-start: 2;
   }
 
   &__item {
@@ -78,38 +81,33 @@
 
     &__container {
       margin-top: calc(100vw * (20 / 360));
-      display: grid;
-      grid-template-columns: 100%;
-      grid-template-rows: min-content min-content;
-      gap: 0;
-    }
-
-    .load_btn {
-      margin-block: calc(100vw * (16 / 360)) calc(100vw * (30 / 360));
+      display: flex;
+      flex-direction: column;
     }
 
     &__img {
       width: 100%;
       height: auto;
-      grid-row-start: 3;
+      margin-top: calc(100vw * (30 / 360));
     }
 
     &__list {
       display: flex;
       flex-direction: column;
-      gap: calc(100vw * (16 / 360));
+      gap: 0;
     }
 
     &__item {
       font-size: calc(100vw * (14 / 360));
       line-height: calc(100vw * (18 / 360));
       padding: calc(100vw * (20 / 360));
-      box-shadow: 0px calc(100vw * (4 / 360)) calc(100vw * (34 / 360)) rgba(0, 0, 0, 0.04);
+      box-shadow: none;
       border-radius: calc(100vw * (12 / 360));
-    }
+      margin-bottom: calc(100vw * (16 / 360));
 
-    &__projects {
-      margin-top: calc(100vw * (20 / 360));
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 }

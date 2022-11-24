@@ -150,12 +150,19 @@
     padding-block: calc(100vw * (30 / 360)) calc(100vw * (50 / 360));
 
     &__list {
-      grid-template-columns: 100%;
-      gap: calc(100vw * (30 / 360));
+      display: flex;
+      flex-direction: column;
+      gap: 0;
     }
 
     &__item {
+      margin-bottom: calc(100vw * (30 / 360));
       border-radius: calc(100vw * (12 / 360));
+      flex-shrink: 0;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
 
     &__item--big {
@@ -230,7 +237,6 @@
 
     .load_btn {
       width: 100%;
-      margin-top: calc(100vw * (30 / 360));
     }
   }
 }

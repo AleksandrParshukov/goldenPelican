@@ -122,14 +122,19 @@
       margin-right: 0;
       display: flex;
       flex-direction: column;
-      gap: calc(100vw * (14 / 360));
+      gap: 0;
     }
 
     &__item {
       font-size: calc(100vw * (16 / 360));
       line-height: calc(100vw * (36 / 360));
       padding-bottom: calc(100vw * (14 / 360));
+      margin-bottom: calc(100vw * (14 / 360));
       border-bottom: 1px solid @black-fade;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
     
     &__diagram {
@@ -148,10 +153,6 @@
     &__progress {
       position: absolute;
       inset: calc(100vw * (-27 / 360));
-    }
-
-    .load_btn {
-      margin-top: calc(100vw * (14 / 360));
     }
   }
 }
