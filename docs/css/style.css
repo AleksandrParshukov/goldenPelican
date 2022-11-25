@@ -1210,6 +1210,7 @@ input[type=number]::-webkit-outer-spin-button {
 .helped__list {
   margin-top: 40px;
   display: flex;
+  overflow: hidden;
 }
 .helped__item {
   width: 300px;
@@ -2901,6 +2902,7 @@ input[type=number]::-webkit-outer-spin-button {
 .other_news__list {
   margin-top: 40px;
   display: flex;
+  overflow: hidden;
 }
 .other_news__item {
   width: 300px;
