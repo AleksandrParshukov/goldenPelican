@@ -161,7 +161,6 @@ function init_progress_bar() {
 	const $progress_bar = $('.hall_of_fame__progress');
 
 	if (!$progress_bar.length) {
-		console.log('return');
 		return false;
 	}
 
@@ -177,18 +176,53 @@ function init_list_loader() {
 
 	$.each($load_btns, function () {
 		const $load_btn = $(this),
-			$list = $(`#${$load_btn.data('for')}`);
+			$list = $(`#${$load_btn.data('for')}`),
+			items_to_show = $list.data('items_to_show');
+
+		$list.height(get_visible_height());
+
+		$load_btn.on('click', function (evt) {
+			evt.preventDefault();
+
+			const $hidden_items = $list.children(':not(.mobile_visible)');
+			for (let i = 0; i < items_to_show; i++) {
+				$($hidden_items[i]).addClass('mobile_visible');
+			}
+
+			if ($hidden_items.length < items_to_show) {
+				$load_btn.slideUp(500, function () {
+					$load_btn.remove();
+				});
+			}
+
+			$list.height(get_visible_height());
+		});
+
+		function get_visible_height() {
+			const $visible_items = $list.children('.mobile_visible');
+			let height = 0;
+
+			$.each($visible_items, function () {
+				const $item = $(this);
+
+				height += $item.outerHeight(true);
+				console.log(`cur: ${$item.outerHeight(true)}`);
+				console.log(`tot: ${height}`);
+			});
+
+			return height;
+		}
 	});
 }
 
-
 $(document).ready(function () {
-  init_sliders();
-  init_custom_select();
-  init_popup();
-  init_progress_bar();
+	init_sliders();
+	init_custom_select();
+	init_popup();
+	init_progress_bar();
 
-  if (window.innerWidth <= 576) {
-    init_mobile_menu();
-  }
+	if (window.innerWidth <= 576) {
+		init_mobile_menu();
+		init_list_loader();
+	}
 });
